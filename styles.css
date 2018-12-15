@@ -33,6 +33,11 @@ body {
   justify-content: center;
 }
 
+.paragraphs {
+  font-size: 1.25rem;
+  font-family: "EB Garamond";
+}
+
 /* NAVIGATION */
 /* NAVIGATION */
 /* NAVIGATION */
@@ -64,7 +69,7 @@ body {
 /* JUMBOTRON */
 
 #landingPage {
-  background: url("images/landing page/background.jpg");
+  background: url("images/landing page/background2.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -123,15 +128,16 @@ body {
 #aboutMeSection {
   height: 100vh;
   padding: 100px 0 20px 0;
-  /* background: url("images/about me/background5.jpg"); */
+  background: url("images/about me/background3.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 250px -150px;
 }
 
 #aboutMeHeader {
   margin: 0 0 10px;
   padding-left: 20px;
   text-align: left;
+  font-family: "EB Garamond";
 }
 
 #aboutMePortrait {
