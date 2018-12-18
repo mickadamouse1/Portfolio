@@ -64,14 +64,14 @@ body {
   justify-content: space-around;
 }
 
-/* JUMBOTRON */
-/* JUMBOTRON */
-/* JUMBOTRON */
+/* LANDING PAGE */
+/* LANDING PAGE */
+/* LANDING PAGE */
 
 #landingPage {
   background: url("images/landing page/background2.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 400px -100px;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -83,7 +83,8 @@ body {
   font-weight: 300;
   position: absolute;
   top: 255px;
-  left: 200px;
+  left: 350px;
+  font-weight: 700;
 }
 
 /* #michaelJap:hover, #michaelEng:hover, #chambersEng:hover, #chambersJap:hover {
@@ -97,7 +98,7 @@ body {
   font-weight: 500;
   position: absolute;
   top: 315px;
-  left: 315px;
+  left: 465px;
 }
 
 #chambersEng {
@@ -108,7 +109,7 @@ body {
   /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); */
   position: absolute;
   top: 415px;
-  left: 355px;
+  left: 505px;
 }
 
 #chambersJap {
@@ -118,7 +119,8 @@ body {
   /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); */
   position: absolute;
   top: 525px;
-  left: 250px;
+  left: 400px;
+  font-weight: 700;
 }
 
 /* ABOUT ME */
