@@ -34,7 +34,7 @@ body {
 }
 
 .paragraphs {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-family: "EB Garamond";
 }
 
@@ -54,10 +54,11 @@ body {
 .nav-link {
   color: #262730;
   font-size: 1.4rem;
+  font-family:
 }
 
 .nav-link:hover {
-  color: white;
+  color: rgba(205,0,0);
 }
 
 #navLinks {
@@ -71,8 +72,9 @@ body {
 #landingPage {
   background: url("images/landing page/background2.jpg");
   background-size: cover;
-  background-position: 400px -100px;
+  background-position: 400px -10%;
   height: 100vh;
+  display: flex;
   margin: 0;
   padding: 0;
 }
@@ -82,23 +84,19 @@ body {
   color: #262730;
   font-weight: 300;
   position: absolute;
-  top: 255px;
-  left: 350px;
+  top: 26.3%;
+  left: 18.5%;
   font-weight: 700;
 }
-
-/* #michaelJap:hover, #michaelEng:hover, #chambersEng:hover, #chambersJap:hover {
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
-/* } */
 
 #michaelEng {
   font-size: 7rem;
   color: #262730;
   font-family: "EB Garamond";
   font-weight: 500;
-  position: absolute;
-  top: 315px;
-  left: 465px;
+  position: relative;
+  top: 32.5%;
+  left: 24.5%;
 }
 
 #chambersEng {
@@ -106,21 +104,30 @@ body {
   color: #262730;
   font-family: "EB Garamond";
   font-weight: 500;
-  /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); */
   position: absolute;
-  top: 415px;
-  left: 505px;
+  top: 42.5%;
+  left: 26.5%;
 }
 
 #chambersJap {
   font-size: 5rem;
   color: #262730;
   font-weight: 300;
-  /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); */
   position: absolute;
-  top: 525px;
-  left: 400px;
+  top: 54%;
+  left: 21%;
   font-weight: 700;
+}
+
+#homeArrow img {
+  width: 5rem;
+  opacity: 0.5;
+}
+
+#homeArrow {
+  position: absolute;
+  top: 89%;
+  left: 47.5%;
 }
 
 /* ABOUT ME */
@@ -133,6 +140,7 @@ body {
   background: url("images/about me/background3.jpg");
   background-size: cover;
   background-position: 250px -150px;
+  position: relative;
 }
 
 #aboutMeHeader {
@@ -149,6 +157,163 @@ body {
 
 #aboutMeSection p {
   padding: 0 200px 0 0;
+}
+
+#aboutArrow img {
+  width: 5rem;
+  opacity: 0.5;
+}
+
+#aboutArrow {
+  position: absolute;
+  top: 89%;
+  left: 47.5%;
+}
+
+/* PROJECTS */
+/* PROJECTS */
+/* PROJECTS */
+
+#projectsSection {
+  height: 100vh;
+  padding: 100px 0 20px 0;
+}
+
+#projectsHeader {
+  margin: 0 0 10px;
+  padding-left: 20px;
+  text-align: left;
+  font-family: "EB Garamond";
+}
+
+.projectrow {
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.projectrow div {
+  background: %A;
+}
+
+.appImage1, .appImage2, .appImage3, .appImage4, .appImage5, .appImage6, .appImage7, .appImage8, .appImage9 {
+  box-shadow: 0 0px 2px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 200px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.appImage1 {
+  background: url("images/projects/app1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage2 {
+  background: url("images/projects/app2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage3 {
+  background: url("images/projects/app3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage4 {
+  background: url("images/projects/app4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage5 {
+  background: url("images/projects/app5.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage6 {
+  background: url("images/projects/app6.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage7 {
+  background: url("images/projects/app7.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage8 {
+  background: url("images/projects/app8.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appImage9 {
+  background: url("images/projects/app9.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.appName {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.app:hover .appImage1 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage2 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage3 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage4 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage5 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage6 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage7 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage8 {
+  opacity: 0.6;
+}
+
+.app:hover .appImage9 {
+  opacity: 0.6;
+}
+
+.app:hover .appName {
+  opacity: 1;
+}
+
+.appName div {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
 /* MY STORY */
