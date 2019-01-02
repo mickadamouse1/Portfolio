@@ -38,6 +38,7 @@ body {
   font-family: "EB Garamond";
 }
 
+
 /* NAVIGATION */
 /* NAVIGATION */
 /* NAVIGATION */
@@ -127,7 +128,7 @@ body {
 #homeArrow {
   position: absolute;
   top: 89%;
-  left: 47.5%;
+  left: 47.6%;
 }
 
 /* ABOUT ME */
@@ -167,7 +168,7 @@ body {
 #aboutArrow {
   position: absolute;
   top: 89%;
-  left: 47.5%;
+  left: 47.6%;
 }
 
 /* PROJECTS */
@@ -177,25 +178,31 @@ body {
 #projectsSection {
   height: 100vh;
   padding: 100px 0 20px 0;
+  position: relative;
 }
 
 #projectsHeader {
   margin: 0 0 10px;
-  padding-left: 20px;
+  padding-left: 2rem;
   text-align: left;
   font-family: "EB Garamond";
 }
 
-.projectrow {
-  justify-content: space-between;
-  margin: 50px 0;
+#projectsGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  height: 74vh;
 }
 
-.projectrow div {
-  background: %A;
+.app {
+  width: 500px;
+  position: relative;
+  margin: 15px 15px;
 }
 
-.appImage1, .appImage2, .appImage3, .appImage4, .appImage5, .appImage6, .appImage7, .appImage8, .appImage9 {
+.appImage1, .appImage2, .appImage3, .appImage4, .appImage5, .appImage6 {
   box-shadow: 0 0px 2px;
   opacity: 1;
   display: block;
@@ -241,67 +248,22 @@ body {
   background-size: cover;
 }
 
-.appImage7 {
-  background: url("images/projects/app7.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.appImage8 {
-  background: url("images/projects/app8.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.appImage9 {
-  background: url("images/projects/app9.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
 .appName {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 42.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
 
-.app:hover .appImage1 {
-  opacity: 0.6;
-}
-
-.app:hover .appImage2 {
-  opacity: 0.6;
-}
-
-.app:hover .appImage3 {
-  opacity: 0.6;
-}
-
-.app:hover .appImage4 {
-  opacity: 0.6;
-}
-
-.app:hover .appImage5 {
-  opacity: 0.6;
-}
-
+.app:hover .appImage1,
+.app:hover .appImage2,
+.app:hover .appImage3,
+.app:hover .appImage4,
+.app:hover .appImage5,
 .app:hover .appImage6 {
-  opacity: 0.6;
-}
-
-.app:hover .appImage7 {
-  opacity: 0.6;
-}
-
-.app:hover .appImage8 {
-  opacity: 0.6;
-}
-
-.app:hover .appImage9 {
   opacity: 0.6;
 }
 
@@ -309,19 +271,42 @@ body {
   opacity: 1;
 }
 
-.appName div {
+.appName {
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.appName a {
   background-color: black;
   color: white;
-  font-size: 16px;
+  font-size: 1.2rem;
+  font-family: "EB Garamond";
+  font-weight: 700;
   padding: 16px 32px;
+  margin: auto 0;
+  text-align: center;
+  text-decoration: none;
 }
+
+.appName a:hover {
+  background-color: #333;
+}
+
+#projectsArrow img {
+  width: 5rem;
+  opacity: 0.5;
+  margin: 0 auto;
+  display: block;
+}
+
 
 /* MY STORY */
 /* MY STORY */
 /* MY STORY */
 
 #myStorySection {
-  background: #f1f1f1;
+  background: #fff;
   background-position: center;
   background-size: cover;
   height: 970px;
