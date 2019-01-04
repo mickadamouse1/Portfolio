@@ -38,10 +38,20 @@ body {
   font-family: "EB Garamond";
 }
 
+input, label {
+  display: block;
+}
 
 /* NAVIGATION */
 /* NAVIGATION */
 /* NAVIGATION */
+
+#nav {
+  width: 100%;
+  background: #FFFFFF;
+  /* orange colour #F96E5B */
+  position: fixed;
+}
 
 #brand {
   color: #262730;
@@ -63,7 +73,7 @@ body {
 }
 
 #navLinks {
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 
 /* LANDING PAGE */
@@ -74,7 +84,7 @@ body {
   background: url("images/landing page/background2.jpg");
   background-size: cover;
   background-position: 400px -10%;
-  height: 100vh;
+  height: 969px;
   display: flex;
   margin: 0;
   padding: 0;
@@ -136,12 +146,21 @@ body {
 /* ABOUT ME */
 
 #aboutMeSection {
-  height: 100vh;
+  height: 969px;
   padding: 100px 0 20px 0;
   background: url("images/about me/background3.jpg");
   background-size: cover;
-  background-position: 250px -150px;
+  background-position: 300px -150px;
   position: relative;
+}
+
+
+#aboutMeGrid{
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  height: 74vh;
 }
 
 #aboutMeHeader {
@@ -149,26 +168,61 @@ body {
   padding-left: 20px;
   text-align: left;
   font-family: "EB Garamond";
+  color: #333;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 #aboutMePortrait {
-  width: 350px;
-  float: left;
+  width: 390px;
+  box-shadow: 0 0px 2px;
 }
 
 #aboutMeSection p {
-  padding: 0 200px 0 0;
+  padding: 12px 180px 0 30px;
 }
 
 #aboutArrow img {
   width: 5rem;
   opacity: 0.5;
+  margin: 0 auto;
+  display: block;
+}
+/* SKILLS */
+/* SKILLS */
+/* SKILLS */
+
+#skillsSection {
+  height: 969px;
+  padding: 100px 0 20px 0;
 }
 
-#aboutArrow {
-  position: absolute;
-  top: 89%;
-  left: 47.6%;
+#skillsSection h1 {
+  font-family: "eb garamond";
+  padding-left: 1.8rem;
+  color: #333;
+}
+
+#skills {
+  margin: 20px 0 0 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skill {
+  margin: 0 0;
+  width: 28%;
+  display: inline-table;
+}
+
+#skillCharts {
+  display: flex;
+}
+
+#skillCharts img {
+  width: 50%;
+  height: 50%;
 }
 
 /* PROJECTS */
@@ -176,16 +230,19 @@ body {
 /* PROJECTS */
 
 #projectsSection {
-  height: 100vh;
+  height: 969px;
+  min-height: 100vh;
   padding: 100px 0 20px 0;
   position: relative;
+  background: ;
 }
 
 #projectsHeader {
   margin: 0 0 10px;
-  padding-left: 2rem;
+  padding-left: 3rem;
   text-align: left;
   font-family: "EB Garamond";
+  color: #333;
 }
 
 #projectsGrid {
@@ -207,7 +264,7 @@ body {
   opacity: 1;
   display: block;
   width: 100%;
-  height: 200px;
+  height: 100%;
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -215,37 +272,37 @@ body {
 .appImage1 {
   background: url("images/projects/app1.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 .appImage2 {
   background: url("images/projects/app2.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 .appImage3 {
   background: url("images/projects/app3.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 .appImage4 {
   background: url("images/projects/app4.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 .appImage5 {
   background: url("images/projects/app5.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 .appImage6 {
   background: url("images/projects/app6.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 .appName {
@@ -278,7 +335,7 @@ body {
 }
 
 .appName a {
-  background-color: black;
+  background-color: #323031;
   color: white;
   font-size: 1.2rem;
   font-family: "EB Garamond";
@@ -290,7 +347,7 @@ body {
 }
 
 .appName a:hover {
-  background-color: #333;
+  background-color: #084C61;
 }
 
 #projectsArrow img {
@@ -300,6 +357,91 @@ body {
   display: block;
 }
 
+/* CONTACT */
+/* CONTACT */
+/* CONTACT */
+
+#contactSection {
+  height: 969px;
+  background: #FFC57C;
+  color: #333;
+  position: relative;
+  font-family: ;
+  font-weight: bold;
+}
+
+#contactForm  {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  left: 0;
+}
+
+#contactSection h1, #contactSection p {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 450px;
+  font-size: 1.2rem;
+  font-family: "roboto";
+}
+
+#contactSection h1 {
+  padding: 150px 0 10px 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#contactForm label, input, textarea, button {
+  margin: auto auto;
+  display: block;
+}
+
+#contactForm label {
+  font-size: 20px;
+  margin: 10px auto 0;
+}
+
+#contactForm input {
+  box-shadow: 0 0 10px 1px rgba(0,0,0, 0.2);
+  border: none;
+  border-radius: 3px;
+  background: #f8f8f8;
+  height: 35px;
+  padding: 0 0 0 5px;
+}
+
+#contactForm textarea {
+  width: 583px;
+  height: 150px;
+  padding: 10px 0 0 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: #F8f8f8;
+  resize: none;
+  box-shadow: 0 0 10px 1px rgba(0,0,0, 0.2);
+}
+
+#contactForm button {
+  width: 583px;
+  height: 50px;
+  background: #99544D;
+  box-shadow: 0 0 10px 1px rgba(0,0,0, 0.2);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "roboto";
+  color: #f8f8f8;
+}
+
+#contactForm label, input {
+  width: 583px;
+  text-align: left;
+}
 
 /* MY STORY */
 /* MY STORY */

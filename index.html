@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <title>Michael Chambers</title>
   </head>
   <body>
@@ -15,19 +15,19 @@
 <!-- NAVIGATION BAR -->
 <!-- NAVIGATION BAR -->
 
-    <nav id="nav" class="navbar navbar-expand-md fixed-top container">
-      <h1 id="brand" class="navbar-brand">M. CHAMBERS</h1>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navLinks">
-        <ul class="navbar-nav">
-            <li class="nav-item active"><a class="nav-link scroll" href="#landingPage">HOME</a></li>
-            <li class="nav-item"><a class="nav-link scroll" href="#aboutJump">ABOUT</a></li>
-            <li class="nav-item"><a class="nav-link scroll" href="#projectsJump">PROJECTS</a></li>
-            <li class="nav-item"><a class="nav-link scroll" href="#contactJump">CONTACT</a></li>
-            <li class="nav-item"><a class="nav-link scroll" href="#storyJump">MY STORY</a></li>
-          </ul>
+    <nav id="nav" class="navbar navbar-expand-md fixed-top">
+      <div class="container">
+        <h1 id="brand" class="navbar-brand">M. CHAMBERS</h1>
+        <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav">
+              <li class="nav-item active"><a class="nav-link scroll" href="#landingPage">HOME</a></li>
+              <li class="nav-item"><a class="nav-link scroll" href="#aboutJump">ABOUT</a></li>
+              <li class="nav-item"><a class="nav-link scroll" href="#skillsJump">SKILLS</a></li>
+              <li class="nav-item"><a class="nav-link scroll" href="#projectsJump">PROJECTS</a></li>
+              <li class="nav-item"><a class="nav-link scroll" href="#contactJump">CONTACT</a></li>
+              <li class="nav-item"><a class="nav-link scroll" href="#storyJump">MY STORY</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -51,14 +51,10 @@
 <a name="aboutJump"></a>
     <section id="aboutMeSection">
       <div class="container">
-        <div class="row">
-          <h1 id="aboutMeHeader">ABOUT ME</h1>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <img id="aboutMePortrait" src="images/about me/portrait.jpg" alt="">
-          </div>
-          <div class="col-8 paragraphs">
+        <h1 id="aboutMeHeader">ABOUT ME</h1>
+        <div id="aboutMeGrid">
+          <img id="aboutMePortrait" src="images/about me/portrait.jpg" alt="">
+          <div class="paragraphs">
             <p><b>Who am I?</b> My name is Michael Chambers. I am a student in Liverpool studying Computer Science... <b><em>yay!</em></b> I'm a happy guy who loves to meet new people and take on new tasks. Learning is something I love more than anything!</p>
 
             <p><b>What I do:</b> I am currently studying C#, mySQL, networking and other Computer Science related subjects in University. I prefer to study, in my own time, HTML, CSS, JavaScript etc. as these are the primary tools used in Software Development.</p>
@@ -67,12 +63,56 @@
           </div>
         </div>
       </div>
-      <a id="aboutArrow" href="#projectsJump"><img src="images/arrow.png"></a>
+      <a id="aboutArrow" href="#skillsJump"><img src="images/arrow.png"></a>
     </section>
+
+<!-- SKILLS -->
+<!-- SKILLS -->
+<!-- SKILLS -->
+
+<a name="skillsJump"></a>
+<section id="skillsSection">
+  <div class="container">
+    <h1>SKILLS</h1>
+    <div id="skillsGrid">
+      <div id="skills">
+        <div class="skill">
+          <h5>JavaScript</h5>
+          <p>I have recently start studying JavaScript. I have very little experience with the language. I understand the basic concepts such as loops, if else statements, arrayys, and the various datatypes.<p>
+        </div>
+        <div class="skill">
+          <h5>Networking</h5>
+          <p>I began learning Networking in University recently and have managed to pick up the absolute basics of how a network runs, the benefits and the negatives. I have no practical experience.</p>
+        </div>
+        <div class="skill">
+          <h5>SQL</h5>
+          <p>I have also recently began studying <strong><em>mySQL</em></strong> in University. I have learned the basics and can make minor changes to large databases. I know how to perform a number of different commands.</p>
+        </div>
+        <div class="skill">
+          <h5>C#</h5>
+          <p>Unlike JavaScript, I have to study C# as a part of my Unviversity major. Luckily it works alongside my JavaScript studies as they are both programming languages. I understand how to build simple visual studio apps.</p>
+        </div>
+        <div class="skill">
+          <h5>HTML</h5>
+          <p>This markup langauge is easily the language I am most proficient with as it was the first I studied. I understand many of the tools, how to write clean code, and structure my documents effectively.</p>
+        </div>
+        <div class="skill">
+          <h5>CSS</h5>
+          <p>Along with HTML, I have studied CSS with minimal framework usage. I know many of the selectors, properties and values to accurately style a website up to professional standards.</p>
+        </div>
+      </div>
+    </div>
+      <div id="skillCharts">
+        <img src="images/skills/chart.png" alt="">
+        <img src="images/skills/pieChart.png" alt="">
+      </div>
+  </div>
+</section>
 
 <!-- PROJECTS -->
 <!-- PROJECTS -->
 <!-- PROJECTS -->
+
 <a name="projectsJump"></a>
 <section id="projectsSection">
   <div class="container">
@@ -121,11 +161,31 @@
   </div>
 </section>
 
+<!-- CONTACT -->
+<!-- CONTACT -->
+<!-- CONTACT -->
+<a name="contactJump"></a>
+<section id="contactSection">
+  <div class="container">
+    <h1>~Contact Me~</h1>
+    <p>If you would like to contact me for any reason whatsoever, simply fill out this form and I will reply as soon as possible. Thanks :D</p>
+    <form id="contactForm" class="" action="index.html" method=" post">
+      <label for="contactName">Name*</label>
+      <input type="text" name="contactName" value="" placeholder=" James Doh">
+      <label for="contactEmail">Email*</label>
+      <input id="contactEmail" type="text" name="contactEmail" value="" placeholder=" example@gmail.com">
+      <label for="contactMessage">What's up?</label>
+      <textarea name="name" placeholder=""></textarea><br>
+      <button id="contactSend" type="button" name="button">SEND</button>
+    </form>
+  </div>
+</section>
+
 <!-- MY STORY -->
 <!-- MY STORY -->
 <!-- MY STORY -->
 
-<a name="storyJump"></a>
+<!-- <a name="storyJump"></a>
     <section id="myStorySection" class="container-fluid">
       <div id="myStoryRow" class="row">
         <div id="myStoryLeft" class="col-5">
@@ -151,7 +211,7 @@
           <p>I was still sceptical about becoming a Software Developer because I wasn't very good at math or learning things... <em>or so I thought</em>. So, I kept studying </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
 <!-- FOOTER -->
 <!-- FOOTER -->
