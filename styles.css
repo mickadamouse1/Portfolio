@@ -4,6 +4,10 @@
 
 body {
   margin: 0;
+  background: url("images/landing page/background2.jpg");
+  background-size: 4px;
+  height: 969px;
+  padding: 0;
 }
 
 .noselect {
@@ -33,11 +37,6 @@ body {
   justify-content: center;
 }
 
-.paragraphs {
-  font-size: 1.4rem;
-  font-family: "EB Garamond";
-}
-
 input, label {
   display: block;
 }
@@ -51,6 +50,7 @@ input, label {
   background: #FFFFFF;
   /* orange colour #F96E5B */
   position: fixed;
+  z-index: 1030;
 }
 
 #brand {
@@ -65,7 +65,6 @@ input, label {
 .nav-link {
   color: #262730;
   font-size: 1.4rem;
-  font-family:
 }
 
 .nav-link:hover {
@@ -81,21 +80,38 @@ input, label {
 /* LANDING PAGE */
 
 #landingPage {
-  background: url("images/landing page/background2.jpg");
-  background-size: cover;
-  background-position: 400px -10%;
   height: 969px;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
+#landingPageBackground {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("images/landing page/background2.jpg");
+  background-size: cover;
+  background-position: 400px -10%;
+  opacity: 1;
+}
+
+#landingPageBackgroundDots {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("images/landing page/background2.jpg");
+  background-size: cover;
+  background: none;
+}
+
 #michaelJap {
   font-size: 5rem;
   color: #262730;
-  font-weight: 300;
   position: absolute;
-  top: 26.3%;
+  top: 263px;
   left: 18.5%;
   font-weight: 700;
 }
@@ -105,8 +121,8 @@ input, label {
   color: #262730;
   font-family: "EB Garamond";
   font-weight: 500;
-  position: relative;
-  top: 32.5%;
+  position: absolute;
+  top: 325px;
   left: 24.5%;
 }
 
@@ -116,7 +132,7 @@ input, label {
   font-family: "EB Garamond";
   font-weight: 500;
   position: absolute;
-  top: 42.5%;
+  top: 425px;
   left: 26.5%;
 }
 
@@ -125,7 +141,7 @@ input, label {
   color: #262730;
   font-weight: 300;
   position: absolute;
-  top: 54%;
+  top: 540px;
   left: 21%;
   font-weight: 700;
 }
@@ -147,47 +163,38 @@ input, label {
 
 #aboutMeSection {
   height: 969px;
-  padding: 100px 0 20px 0;
+  padding: 100px 0 0 0;
+  position: relative;
   background: url("images/about me/background3.jpg");
   background-size: cover;
-  background-position: 300px -150px;
-  position: relative;
+  background-position: 275px -100px;
+  opacity: 1;
 }
 
-
 #aboutMeGrid{
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: auto;
   justify-content: space-around;
   height: 74vh;
 }
 
 #aboutMeHeader {
-  margin: 0 0 10px;
-  padding-left: 20px;
-  text-align: left;
   font-family: "EB Garamond";
   color: #333;
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 #aboutMePortrait {
   width: 390px;
   box-shadow: 0 0px 2px;
+  display: inline-block;
+  float: left;
+  margin: 10px 10px 0 0;
 }
 
-#aboutMeSection p {
-  padding: 12px 180px 0 30px;
+.aboutMeText {
+  font-size: 1.4rem;
+  font-family: "EB Garamond";
+  padding: 12px 180px 0 0;
 }
 
-#aboutArrow img {
-  width: 5rem;
-  opacity: 0.5;
-  margin: 0 auto;
-  display: block;
-}
 /* SKILLS */
 /* SKILLS */
 /* SKILLS */
@@ -195,11 +202,12 @@ input, label {
 #skillsSection {
   height: 969px;
   padding: 100px 0 20px 0;
+  background: white;
 }
 
 #skillsSection h1 {
   font-family: "eb garamond";
-  padding-left: 1.8rem;
+  padding-left: 1.7rem;
   color: #333;
 }
 
@@ -214,6 +222,8 @@ input, label {
   margin: 0 0;
   width: 28%;
   display: inline-table;
+  font-family: "EB Garamond";
+
 }
 
 #skillCharts {
@@ -466,4 +476,115 @@ input, label {
 
 #myStoryRight {
   font-size: 1.2rem;
+}
+
+/* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
+/* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
+/* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
+
+@media (max-width: 1200px) {
+  #landingPageBackground {
+    background: url("images/landing page/background2.jpg");
+    background-size: 2750px;
+    background-position: 49.1%;
+    opacity: 0.7;
+    height: 969px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  #landingPageBackgroundDots {
+    background: url("images/landing page/background2.jpg");
+    background-size: 4px;
+    background-position: 50%;
+    height: 969px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  #michaelJap {
+    font-size: 4.5;
+    font-weight: 300;
+    margin: auto;
+    text-align: center;
+    top: 245px;
+    left: 0;
+    right: 0;
+  }
+
+  #michaelEng {
+    font-size: 5.5rem;
+    font-weight: 300;
+    margin: auto;
+    text-align: center;
+    top: 310px;
+    left: 0;
+    right: 0;
+  }
+
+  #chambersEng {
+    font-size: 5.5rem;
+    font-weight: 300;
+    margin: auto;
+    text-align: center;
+    top: 385px;
+    left: 0;
+    right: 0;
+
+  }
+
+  #chambersJap {
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin: auto;
+    text-align: center;
+    top: 465px;
+    left: 0;
+    right: 0;
+  }
+
+  #aboutMeSection {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .aboutMeText {
+    padding: 3px 18px 0 0;
+  }
+
+  #skillsSection h1 {
+    padding-left: 1.3rem;
+  }
+}
+
+/* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
+/* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
+/* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
+
+@media (max-width: 990px){
+
+  #brand {
+    font-size: 20px;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  #aboutMeSection {
+    height: 850px;
+  }
+
+  #aboutMePortrait {
+    width: 290px;
+  }
+
+  .aboutMeText {
+    padding: 10px 0 0 0;
+  }
+
+  #skillsSection h1 {
+    padding-left: 0.9rem;
+  }
 }
