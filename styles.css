@@ -275,6 +275,10 @@ input, label {
   color: #333;
 }
 
+#apps {
+  text-align: center;
+}
+
 .app {
   display: inline-block;
   position: static;
@@ -616,25 +620,65 @@ input, label {
   #skillsGrid {
     margin-bottom: 20px;
   }
+
+  #projectsHeader {
+    padding-left: 0;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  #apps {
+    text-align: center;
+  }
+
+  .app {
+    width: 45%;
+  }
 }
+
+/* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
+/* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
+/* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
 
 @media (max-width: 769px){
   #aboutMeSection {
-    height: 1000px;
+    height: 1150px;
+  }
+
+  #aboutMeHeader {
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  #aboutMePortrait {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .aboutMeText {
+    text-align: center;
+    font-size: 1.3rem;
   }
 
   #skillsSection {
-    height: 1560px;
+    height: 2100px;
   }
 
   #skillsSection h1 {
     text-align: center;
+    font-size: 5rem;
   }
 
   .skill {
     width: 100%;
-    margin: 0 15px;
+    margin: 10px 15px;
     text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .skill h5 {
+    font-size: 1.6rem;
   }
 
   #skillCharts {
@@ -647,6 +691,7 @@ input, label {
   }
 
   .app {
-    width: 25%;
+    width: 75%;
+    height: 400px;
   }
 }
