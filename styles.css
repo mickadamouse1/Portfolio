@@ -127,6 +127,13 @@ input, label {
   opacity: 1;
 }
 
+#landingPageHeaderGroup {
+  position: static;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+}
+
 #michaelJap {
   font-size: 5rem;
   color: #262730;
@@ -394,16 +401,15 @@ input, label {
 /* CONTACT */
 
 #contactSection {
-  height: 969px;
+  height: 100vh;
   background: #FFC57C;
   color: #333;
-  position: relative;
-  font-family: ;
+  position: static;
   font-weight: bold;
 }
 
 #contactForm  {
-  position: absolute;
+  position: relative;
   top: 35%;
   right: 0;
   left: 0;
@@ -510,18 +516,17 @@ input, label {
     background-size: 2750px;
     background-position: 49.1%;
     opacity: 0.6;
-    height: 882px;
+    height: 100vh;
     display: flex;
     margin: 0;
     padding: 0;
   }
 
   #michaelJap {
-    font-size: 4.5;
     font-weight: 300;
-    margin: auto;
+    position: relative;
     text-align: center;
-    top: 200px;
+    top: 60px;
     left: 0;
     right: 0;
   }
@@ -529,9 +534,9 @@ input, label {
   #michaelEng {
     font-size: 5.5rem;
     font-weight: 300;
-    margin: auto;
+    position: relative;
     text-align: center;
-    top: 270px;
+    top: 30px;
     left: 0;
     right: 0;
   }
@@ -539,9 +544,9 @@ input, label {
   #chambersEng {
     font-size: 5.5rem;
     font-weight: 300;
-    margin: auto;
+    position: relative;
     text-align: center;
-    top: 350px;
+    top: -7px;
     left: 0;
     right: 0;
   }
@@ -549,9 +554,9 @@ input, label {
   #chambersJap {
     font-size: 4.5rem;
     font-weight: 300;
-    margin: auto;
+    position: relative;
     text-align: center;
-    top: 435px;
+    top: -36px;
     left: 0;
     right: 0;
   }
