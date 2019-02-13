@@ -756,12 +756,14 @@ input, label {
     height: 400px;
   }
 
-  #contactSection h1 {
-    padding: 500px 0 10px 0;
-  }
-
   #contactForm label {
     width: 100%;
     text-align: center;
+  }
+
+  @media (max-height: 872px){
+    #contactSection h1 {
+      padding: 500px 0 10px 0;
+    }
   }
 }
