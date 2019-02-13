@@ -420,12 +420,12 @@ input, label {
   display: block;
   text-align: center;
   width: 50%;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: "roboto";
 }
 
 #contactSection h1 {
-  padding: 150px 0 10px 0;
+  padding: 250px 0 10px 0;
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -477,7 +477,6 @@ input, label {
 }
 
 #contactForm label {
-  width: 583px;
   text-align: left;
 }
 
@@ -591,6 +590,10 @@ input, label {
   #projectsSection {
     background: rgba(255, 255, 255, 0.6);
   }
+
+  #contactForm {
+    width: 65%;
+  }
 }
 
 /* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
@@ -675,6 +678,14 @@ input, label {
 
   .app {
     width: 45%;
+  }
+
+  #contactSection h1, #contactSection p {
+    width: 75%;
+  }
+
+  #contactForm {
+    width: 75%;
   }
 }
 
