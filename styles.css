@@ -408,6 +408,10 @@ input, label {
   font-weight: bold;
 }
 
+#contactSectionElementContainer {
+  margin: auto;
+}
+
 #contactForm  {
   position: relative;
   width: 50%;
