@@ -50,7 +50,7 @@ input, label {
   width: 100%;
   justify-content: space-evenly;
   padding-top: 10px;
-  overflow: hidden;
+  overflow: ;
   height: 60px;
 }
 
