@@ -1,7 +1,10 @@
 var canvas = document.getElementById("myCanvas"); // Reference to canvas
 var ctx = canvas.getContext("2d");
-var restartCounter = document.getElementById("restartCounter"); // the count down text
+var restartCounter = document.getElementById("restartCounter"); // the countdown text
 var restartButton = document.getElementById("button"); // the restart button
+var pauseButton = document.getElementById("pauseButton");
+var leftArrow = document.getElementById("leftArrow");
+var rightArrow = document.getElementById("rightArrow");
 var restartCounterCount = 3;
 var ballRadius = 10;
 var x = canvas.width/2;
@@ -13,22 +16,26 @@ var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
-
+var isPaused = false;
+var pausePaddleX;
+var ballSpeedUp = 20;
+var score = 0;
 
 document.addEventListener("keydown", keyDownHandler, false); //will listen for when keys have stopped being pressed
 document.addEventListener("keyup", keyUpHandler, false); // will listen for when keys are being pressed
 
+pauseButton.onclick = function(){pause()};
 
+restartButton.onclick = function() {restartPause()};
 
 function restartPause(){
   restartButton.disabled = "true"; // disables the restart button
+  pauseButton.disabled = "true";
   clearInterval(interval);         // clears the interval (pause game)
   setTimeout(restart, 3000);       // runs the 'restart' function after 3 seconds
   restartCounter.style.display = "block";  // sets the display of the counter to block
   restartCounterLoop();            // runs the restart counter loop (count down)
 }
-
-restartButton.onclick = function() {restartPause()};
 
 function restartCounterLoop(){
   restartCounter.innerHTML = restartCounterCount;         // will display 3 as counter before waiting a second
@@ -45,6 +52,36 @@ function restartCounterLoop(){
 function restart() {
   document.location.reload();
   restartButton.disabled = "false";
+  pauseButton.disabled = "false";
+}
+
+function pause(){                        // PAUSE BUTTON FUNCTION
+  if (isPaused == false) {  //if its not paused, run this
+    isPaused = true;
+    clearInterval(interval);
+    pausePaddleX = paddleX;
+    document.getElementById("pausedText").style.display = "block";
+  } else if (isPaused == true) { //if it is paused, run this
+    isPaused = false;
+    interval = setInterval(draw, ballSpeedUp);
+    document.getElementById("pausedText").style.display = "none";
+    paddleX = pausePaddleX;
+  }
+}
+
+function gameOver(){
+  document.getElementById("gameOverText").style.display = "block";
+  document.getElementById("scoreText").style.display = "block";
+  document.getElementById("score").style.display = "block";
+  document.getElementById("score").innerHTML = score;
+  setTimeout(restart, 3000);
+  clearInterval(interval);
+  setInterval(draw, ballSpeedUp);
+}
+
+document.getElementById("slowMotionButton").onclick = function slowMotion(){
+  clearInterval(interval);
+  interval = setInterval(draw, 300);
 }
 
 function keyDownHandler(e){
@@ -90,12 +127,15 @@ function draw() {
   if(y + dy < ballRadius){
     dy = -dy;
   } else if (y + dy > (canvas.height - ballRadius)) {
-    if (x > paddleX && x < paddleX + paddleWidth) {
+    if (x > paddleX && x < paddleX + paddleWidth && y <= canvas.height) { // if ball locationX is greater than paddleX, and locationY is smaller than canvasHeight, run this
       dy = -dy;
-    } else {
-      alert('gg');
-      document.location.reload();
+      ballSpeedUp /= 1.1;
       clearInterval(interval);
+      interval = setInterval(draw, ballSpeedUp);
+      console.log(ballSpeedUp);
+      score += 1;
+    } else {
+      gameOver();
     }
   }
 
@@ -110,4 +150,4 @@ function draw() {
   }
 }
 
-var interval = setInterval(draw, 10);
+var interval = setInterval(draw, 20);
