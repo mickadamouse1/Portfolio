@@ -103,6 +103,16 @@ input, label {
 
 .icon {
   display: none;
+  padding: 3px;
+}
+
+#hamburgerIcon i {
+  padding: 3px;
+  border-radius: 20%;
+}
+
+#hamburgerIcon i:hover {
+  background: #f4f4f4;
 }
 
 /* LANDING PAGE */
