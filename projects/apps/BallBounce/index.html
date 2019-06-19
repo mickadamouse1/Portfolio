@@ -8,9 +8,28 @@
   </head>
   <body>
 
-    <canvas id="myCanvas" width="480" height="320"></canvas>
-    <button id="button">RESTART</button>
-    <h1 id="restartCounter">3</h1>
+    <a id="btnBack" href="../../../index.html"><span>Back</span></a>
+
+    <div id="gameWindow">
+      <canvas id="myCanvas" width="480" height="320"></canvas>
+    </div>
+
+    <div id="controls">
+      <button id="leftArrow"><-</button>
+      <button id="button">RESTART</button>
+      <button id="rightArrow">-></button>
+      <button id="pauseButton">PAUSE</button>
+      <button id="slowMotionButton">SLOW</button>
+    </div>
+
+    <div id="gameText">
+      <h1 id="gameOverText">GAME OVER</h1>
+      <h1 id="scoreText">score</h1>
+      <h1 id="score">0</h1>
+      <h1 id="restartCounter">3</h1>
+      <h1 id="pausedText">PAUSED</h1>
+    </div>
+
   <script src="script.js"></script>
   </body>
 </html>
