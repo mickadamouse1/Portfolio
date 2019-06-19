@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+h2 {
+
+}
+
+a {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 125px;
+  height: 40px;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+  text-decoration: none;
+  color: white;
+  background: #333;
+  font-size: 30px;
+}
+
+#btnBack span {
+  vertical-align: middle;
+}
+
+#gameWindow {
+  position: relative;
+  display: flex;
+  background: tan;
+  height: 330px;
+  width: 490px;
+  margin: 30px auto;
+}
+
+canvas {
+  background: seashell;
+  margin: auto;
+}
+
+#controls {
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  margin: 10px 5px;
+}
+
+#gameText {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+}
+
+#pausedText {
+  position: relative;
+  top: 100;
+}
+
+#gameOverText {
+  position: relative;
+  top: 10%;
+  font-size: 4rem;
+}
+
+#score {
+  position: relative;
+  top: 28%;
+  font-size: 1.8rem;
+}
+
+#scoreText {
+  top: 25%;
+  font-size: 1.5rem;
+}
+
+#restartCounter {
+  top: 100%;
+}
+
+#pauseButton {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  display: none;
+  position: relative;
+  font-family: sans-serif;
+  text-align: center;
+  color: #333;
+  margin: 0;
+}

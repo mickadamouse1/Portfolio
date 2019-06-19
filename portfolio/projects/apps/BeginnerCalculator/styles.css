@@ -1,0 +1,15 @@
+
+#container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+button {
+  margin-bottom: 15px;
+}
