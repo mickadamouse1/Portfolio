@@ -616,7 +616,7 @@ input, label {
 
 @media (max-width: 990px){
 
-  #navFlexContainer a {
+  .navLink {
     display: none;
   }
 
@@ -630,6 +630,19 @@ input, label {
 
   .nav-link {
     font-size: 1.1rem;
+  }
+
+  #navLinkList {
+    list-style: none;
+    display: block;
+    position: relative;
+    left: 44%;
+    top: 50px;
+    height: 172px;
+    border-top: #333 solid;
+    border-bottom: #333 solid;
+    background: tomato;
+    padding: 0;
   }
 
   #aboutMeSection {
