@@ -49,8 +49,7 @@ input, label {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  padding-top: 10px;
-  overflow: ;
+  padding: 10px 0 0 0;
   height: 60px;
 }
 
@@ -620,16 +619,16 @@ input, label {
     display: none;
   }
 
+  .navIconItem {
+    display: none;
+  }
+
   #navFlexContainer a.icon {
     float: right;
     display: block;
     font-size: 25px;
     color: red;
     opacity: 0.5;
-  }
-
-  .nav-link {
-    font-size: 1.1rem;
   }
 
   #navLinkList {

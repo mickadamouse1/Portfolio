@@ -1,9 +1,12 @@
 var navLinks = document.getElementsByClassName("navLink");
+var icons = document.getElementsByClassName("navIconItem");
 var navLinkVisability = false;
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 var timeout = true;
 var dropDownStatus = false;
 
+
+// Changes class display by inputting the parameters (element, value)
 function setVisability(element, status) {
   for (var i = 0; i < element.length; i++){
     element[i].style.display = status;
@@ -13,10 +16,14 @@ function setVisability(element, status) {
 hamburgerIcon.onclick = function(){
   if (navLinkVisability == false){
     setVisability(navLinks, "block");
+    setVisability(icons, "block");
     navLinkVisability = true;
     dropDownStatus = true;
+    navFlexContainer.style.padding = "10px 35px 0 35px";
   } else {
-    setVisability(navLinks, "none")
+    setVisability(navLinks, "none");
+    setVisability(icons, "none");
+    navFlexContainer.style.padding = "10px 0 0 0";
     navLinkVisability = false;
     dropDownStatus = false;
   }
@@ -40,5 +47,5 @@ window.addEventListener('resize', function() {
     setTimeout(function(){
       timeout = true;
     }, 0);
-  } 
+  }
 }, false);

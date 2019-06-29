@@ -1,0 +1,4 @@
+UPDATE LOG - by date - Michael Chambers
+-----------------------------------------------------------------------------------------------------
+29/06/2019 -- Added a clock application (projects section). Half completed navigation dropdown menu.
+-----------------------------------------------------------------------------------------------------
