@@ -94,6 +94,7 @@ input, label {
   color: #262730;
   font-size: 1.4rem;
   padding: 0 10px;
+  text-align: center;
 }
 
 .navLink:hover {
@@ -493,31 +494,6 @@ input, label {
   text-align: left;
 }
 
-/* MY STORY */
-/* MY STORY */
-/* MY STORY */
-
-#myStorySection {
-  background: #fff;
-  background-position: center;
-  background-size: cover;
-  height: 970px;
-}
-
-#myStoryRow {
-  position: relative;
-  top: 150px;
-}
-
-#myStoryPortrait {
-  float: right;
-  width: 100%;
-}
-
-#myStoryRight {
-  font-size: 1.2rem;
-}
-
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
@@ -621,6 +597,8 @@ input, label {
 
   .navIconItem {
     display: none;
+    width: 48%;
+    text-align: center;
   }
 
   #navFlexContainer a.icon {
@@ -635,12 +613,16 @@ input, label {
     list-style: none;
     display: block;
     position: relative;
-    left: 44%;
+    left: 35%;
     top: 50px;
-    height: 172px;
+    height: 208px;
     border-top: #333 solid;
     border-bottom: #333 solid;
     background: tomato;
+    padding: 0;
+  }
+
+  #navAccountIconLink, #navBlogIconLink {
     padding: 0;
   }
 
