@@ -593,6 +593,7 @@ input, label {
 
   .navLink {
     display: none;
+    color: wheat;
   }
 
   .navIconItem {
@@ -618,12 +619,16 @@ input, label {
     height: 208px;
     border-top: #333 solid;
     border-bottom: #333 solid;
-    background: tomato;
+    background: indianred;
     padding: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   #navAccountIconLink, #navBlogIconLink {
     padding: 0;
+    color: wheat;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 1;
   }
 
   #aboutMeSection {

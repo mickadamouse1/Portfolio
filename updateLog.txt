@@ -1,6 +1,8 @@
 UPDATE LOG - by date - Michael Chambers
 -----------------------------------------------------------------------------------------------------
-29/06/2019 -- Added a clock application (projects section). Half completed navigation dropdown menu.
+29/06/2019 -- Added a clock application (projects section). Half completed navigation drop-down menu.
 -----------------------------------------------------------------------------------------------------
-30/06/2019 -- Progress on dropdown menu responsiveness (very buggy).
+30/06/2019 -- Progress on drop-down menu responsiveness (very buggy).
+-----------------------------------------------------------------------------------------------------
+01/07/2019 -- New functions for optimisation, drop-down menu styled & working, responisve nav.
 -----------------------------------------------------------------------------------------------------
