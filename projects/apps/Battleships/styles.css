@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+.hit {
+  background: red;
+}
+
+.miss {
+  background: cyan;
+}
+
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+  font-family: sans-serif;
+}
+
+#battleshipsTitle {
+  font-size: 50px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#battleshipGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  background: #333;
+  height: 100px;
+  margin: auto;
+  width: 50%;
+}
+
+#battleshipGrid a {
+  font-size: 30px;
+  color: wheat;
+}
+
+#btnPlay {
+  width: 100px;
+  height: 45px;
+  margin: 50px auto;
+  font-size: 30px;
+  border: none;
+  background: #333;
+  color: wheat;
+  box-shadow: 0 3px 0px rgba(150,0,0, 0.5);
+}
+
+p {
+  margin: auto;
+}
