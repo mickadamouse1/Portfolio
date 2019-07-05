@@ -6,3 +6,7 @@ UPDATE LOG - by date - Michael Chambers
 -----------------------------------------------------------------------------------------------------
 01/07/2019 -- New functions for optimisation, drop-down menu styled & working, responisve nav.
 -----------------------------------------------------------------------------------------------------
+04/07/2019 -- Added a new Battleships game project into the projects section (Work in progress).
+-----------------------------------------------------------------------------------------------------
+05/07/2019 -- Battleships: Added styling, responsiveness and began restructuring the program.
+-----------------------------------------------------------------------------------------------------
