@@ -9,10 +9,6 @@ body {
   background: #f4f4f4;
 }
 
-.hit {
-  background: crimson;
-}
-
 #gameContainer {
   font-family: sans-serif;
 }
@@ -43,10 +39,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#battleshipGrid a:hover {
-  background: orange;
 }
 
 #btnPlay {

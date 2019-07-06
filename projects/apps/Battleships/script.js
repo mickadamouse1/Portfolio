@@ -6,7 +6,7 @@ var cell4 = document.getElementById("cell4");
 var cell5 = document.getElementById("cell5");
 var cell6 = document.getElementById("cell6");
 
-var isSunk = false;
+var gameStarted = false;
 var location1;
 var location2;
 var location3;
@@ -14,13 +14,30 @@ var guess;
 var guessesRemaining = 3;
 var hits = 0;
 
-function resetCell(cell, text){
+function setHoverColour(cell, hoverColour, hoverOutColour) { // NOT YET USED
+  cell.onmouseover = function() {
+    this.style.backgroundColor = hoverColour;
+  }
+  cell.onmouseout = function() {
+    this.style.backgroundColor = hoverOutColour;
+  }
+}
+
+function resetCell(cell, text) {
   cell.classList.remove("hit");
-  cell.style.color = "wheat"
+  cell.style.color = "wheat";
+  cell.style.backgroundColor = "#333"
   cell.innerHTML = text;
-};
+}
+
+function styleCell(cell, text, color, backgroundColor) {
+  cell.innerHTML = text;
+  cell.style.color = color;
+  cell.style.backgroundColor = backgroundColor;
+}
 
 function gameStart() {
+  gameStarted = true;
   location1 = Math.floor(Math.random() * (5 - 1) + 1);
   location2 = location1 + 1;
   location3 = location2 + 1;
@@ -31,79 +48,73 @@ function gameStart() {
   guess = 0;
   guessesRemaining = 3
   hits = 0;
-  isSunk = false;
   resetCell(cell1, "1");
-};
+  resetCell(cell2, "2");
+  resetCell(cell3, "3");
+  resetCell(cell4, "4");
+  resetCell(cell5, "5");
+  resetCell(cell6, "6");
+}
 
-function attackCell1() {
-  guess = 1;
-  guessesRemaining--;
+function winGame() {
+  styleCell(cell1, "Win!","whitesmoke", "steelblue");
+  styleCell(cell2, "Win!","whitesmoke", "steelblue");
+  styleCell(cell3, "Win!","whitesmoke", "steelblue");
+  styleCell(cell4, "Win!","whitesmoke", "steelblue");
+  styleCell(cell5, "Win!","whitesmoke", "steelblue");
+  styleCell(cell6, "Win!","whitesmoke", "steelblue");
+}
 
-  if (cell1.innerHTML == "Hit!") {
-    console.log("again");
+function loseGame() {
+  styleCell(cell1, "Lose!","whitesmoke", "crimson");
+  styleCell(cell2, "Lose!","whitesmoke", "crimson");
+  styleCell(cell3, "Lose!","whitesmoke", "crimson");
+  styleCell(cell4, "Lose!","whitesmoke", "crimson");
+  styleCell(cell5, "Lose!","whitesmoke", "crimson");
+  styleCell(cell6, "Lose!","whitesmoke", "crimson");
+}
+
+function attackCell(cellLocation, cell) {
+  guess = cellLocation;
+  console.log(`guess: ${guess}`);
+  if (gameStarted == false) {
+    console.log("*PRESS PLAY TO START*");
+  } else if (hits == 3) {
+    console.log("You Already Won!");
+  } else if (guessesRemaining == 0) {
+    console.log("You Already Lost!");
+  } else if (cell.innerHTML == "Hit!") {
+    console.log("Try A Different Location!");
+  } else if (cell.innerHTML == "Miss!") {
+    console.log("Try A Different Location!");
   } else if (guess == location1 || guess == location2 || guess == location3) {
     hits++;
-    cell1.classList.add("hit");
-    cell1.style.color = "orange";
-    cell1.innerHTML = "Hit!";
-    cell1.style.hover = ""
+    guessesRemaining--;
+    styleCell(cell, "Hit!", "orange", "crimson");
+    if (hits == 3) {
+      console.log("WIN");
+      winGame();
+    } else if (guessesRemaining == 0) {
+      console.log("LOSE");
+      loseGame();
+    }
+    console.log(`${guessesRemaining} Guesses Remaining.`);
   } else {
-    cell1.innerHTML = "Miss!"
+    cell.innerHTML = "Miss!"
+    guessesRemaining--;
+    if (guessesRemaining == 0) {
+      console.log("LOSE");
+      loseGame();
+    }
+    console.log(`${guessesRemaining} Guesses Remaining.`);
   }
 }
 
-btnPlay.onclick = function(){gameStart()};
+btnPlay.onclick = function(){gameStart()}
 
-cell1.onclick = function(){attackCell1()};
-
-///////////////////////////////////////////////////////////////////
-
-// HOVER BUG SOLUTION FOR TOMORROW //
-
-// document.getElementById("mydiv").onmouseover = function() {
-//     this.style.backgroundColor = "blue";
-
-///////////////////////////////////////////////////////////////////
-
-// OLD CODE //
-
-// function gameStart() {
-//   while (hits < 3 && guessesRemaining > 0) {
-//   guess = prompt("Fire! (0-6):");
-//     if (guess > 6) {
-//       alert("Too Far!");
-//     } else if (guess < 0) {
-//       alert("Too Close!");
-//     } else if (guess == location1) {
-//       alert("Hit!");
-//       location1 = null;
-//       hits++;
-//       guessesRemaining--;
-//     } else if (guess == location2) {
-//       alert("Hit!");
-//       location2 = null;
-//       hits++;
-//       guessesRemaining--;
-//     } else if (guess == location3) {
-//       alert("Hit!");
-//       location3 = null;
-//       hits++;
-//       guessesRemaining--;
-//     } else if (guess != location3 || location2 || location3) {
-//       alert("Miss!");
-//       guessesRemaining--;
-//     };
-//   };
-//
-//   if (hits == 3) {
-//     alert("Win");
-//     hits = 0;
-//     guessesRemaining = 3;
-//   }  else if (guessesRemaining == 0) {
-//     alert("You Lose!");
-//     hits = 0;
-//     guessesRemaining = 3;
-//   }
-// };
-//
-// btnPlay.onclick = function() {gameStart()};
+cell1.onclick = function(){attackCell(1, cell1)}
+cell2.onclick = function(){attackCell(2, cell2)}
+cell3.onclick = function(){attackCell(3, cell3)}
+cell4.onclick = function(){attackCell(4, cell4)}
+cell5.onclick = function(){attackCell(5, cell5)}
+cell6.onclick = function(){attackCell(6, cell6)}
