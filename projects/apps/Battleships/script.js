@@ -14,7 +14,7 @@ var guess;
 var guessesRemaining = 3;
 var hits = 0;
 
-function setHoverColour(cell, hoverColour, hoverOutColour) { // NOT YET USED
+function setHoverColour(cell, hoverColour, hoverOutColour) {
   cell.onmouseover = function() {
     this.style.backgroundColor = hoverColour;
   }
@@ -37,41 +37,68 @@ function styleCell(cell, text, color, backgroundColor) {
 }
 
 function gameStart() {
-  gameStarted = true;
-  location1 = Math.floor(Math.random() * (5 - 1) + 1);
-  location2 = location1 + 1;
-  location3 = location2 + 1;
-  console.log("Game Start!");
-  console.log(location1);
-  console.log(location2);
-  console.log(location3);
-  guess = 0;
-  guessesRemaining = 3
-  hits = 0;
-  resetCell(cell1, "1");
-  resetCell(cell2, "2");
-  resetCell(cell3, "3");
-  resetCell(cell4, "4");
-  resetCell(cell5, "5");
-  resetCell(cell6, "6");
+  if (gameStarted == true) {
+    console.log("Finish the current game!");
+  } else {
+    btnPlay.innerHTML = "Play";
+    gameStarted = true;
+    location1 = Math.floor(Math.random() * (5 - 1) + 1);
+    location2 = location1 + 1;
+    location3 = location2 + 1;
+    console.log("Game Start!");
+    console.log(location1);
+    console.log(location2);
+    console.log(location3);
+    guess = 0;
+    guessesRemaining = 3
+    hits = 0;
+    resetCell(cell1, "1");
+    resetCell(cell2, "2");
+    resetCell(cell3, "3");
+    resetCell(cell4, "4");
+    resetCell(cell5, "5");
+    resetCell(cell6, "6");
+    setHoverColour(cell1, "tomato", "#333");
+    setHoverColour(cell2, "tomato", "#333");
+    setHoverColour(cell3, "tomato", "#333");
+    setHoverColour(cell4, "tomato", "#333");
+    setHoverColour(cell5, "tomato", "#333");
+    setHoverColour(cell6, "tomato", "#333");
+  }
 }
 
 function winGame() {
+  gameStarted = false;
+  btnPlay.innerHTML = "Restart";
   styleCell(cell1, "Win!","whitesmoke", "steelblue");
   styleCell(cell2, "Win!","whitesmoke", "steelblue");
   styleCell(cell3, "Win!","whitesmoke", "steelblue");
   styleCell(cell4, "Win!","whitesmoke", "steelblue");
   styleCell(cell5, "Win!","whitesmoke", "steelblue");
   styleCell(cell6, "Win!","whitesmoke", "steelblue");
+  setHoverColour(cell1, "steelblue", "steelblue");
+  setHoverColour(cell2, "steelblue", "steelblue");
+  setHoverColour(cell3, "steelblue", "steelblue");
+  setHoverColour(cell4, "steelblue", "steelblue");
+  setHoverColour(cell5, "steelblue", "steelblue");
+  setHoverColour(cell6, "steelblue", "steelblue");
 }
 
 function loseGame() {
+  gameStarted = false;
+  btnPlay.innerHTML = "Restart";
   styleCell(cell1, "Lose!","whitesmoke", "crimson");
   styleCell(cell2, "Lose!","whitesmoke", "crimson");
   styleCell(cell3, "Lose!","whitesmoke", "crimson");
   styleCell(cell4, "Lose!","whitesmoke", "crimson");
   styleCell(cell5, "Lose!","whitesmoke", "crimson");
   styleCell(cell6, "Lose!","whitesmoke", "crimson");
+  setHoverColour(cell1, "crimson", "crimson");
+  setHoverColour(cell2, "crimson", "crimson");
+  setHoverColour(cell3, "crimson", "crimson");
+  setHoverColour(cell4, "crimson", "crimson");
+  setHoverColour(cell5, "crimson", "crimson");
+  setHoverColour(cell6, "crimson", "crimson");
 }
 
 function attackCell(cellLocation, cell) {
@@ -88,9 +115,11 @@ function attackCell(cellLocation, cell) {
   } else if (cell.innerHTML == "Miss!") {
     console.log("Try A Different Location!");
   } else if (guess == location1 || guess == location2 || guess == location3) {
+    setHoverColour(cell, "crimson", "crimson");
     hits++;
     guessesRemaining--;
-    styleCell(cell, "Hit!", "orange", "crimson");
+    console.log(`${guessesRemaining} Guesses Remaining.`);
+    styleCell(cell, "Hit!", "white", "crimson");
     if (hits == 3) {
       console.log("WIN");
       winGame();
@@ -98,8 +127,9 @@ function attackCell(cellLocation, cell) {
       console.log("LOSE");
       loseGame();
     }
-    console.log(`${guessesRemaining} Guesses Remaining.`);
   } else {
+    styleCell(cell, "Miss!", "white", "#00171F");
+    setHoverColour(cell, "#00171F", "#00171F");
     cell.innerHTML = "Miss!"
     guessesRemaining--;
     if (guessesRemaining == 0) {

@@ -45,13 +45,14 @@ body {
   width: 100px;
   height: 45px;
   margin: 50px auto;
-  font-size: 30px;
+  font-size: 25px;
   border: none;
   background: #333;
   color: wheat;
   box-shadow: 0 3px 0px rgba(150,0,0, 0.5);
   justify-content: center;
   display: flex;
+  outline: none;
 }
 
 p {

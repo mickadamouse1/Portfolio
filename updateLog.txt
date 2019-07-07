@@ -10,3 +10,7 @@ UPDATE LOG - by date - Michael Chambers
 -----------------------------------------------------------------------------------------------------
 05/07/2019 -- Battleships: Added styling, responsiveness and began restructuring the program.
 -----------------------------------------------------------------------------------------------------
+06/07/2019 -- Battleships: Working condition, requires further styling and mechanics.
+-----------------------------------------------------------------------------------------------------
+07/07/2019 -- Battleships: Added colour responsiveness to cells (hover effect).
+-----------------------------------------------------------------------------------------------------
