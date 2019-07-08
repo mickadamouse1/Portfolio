@@ -318,37 +318,37 @@ input, label {
 }
 
 .appImage1 {
-  background: url("images/projects/app1.jpg");
+  background: url("images/projects/bouncyballsIcon.jpg");
   background-position: center;
   background-size: 100% auto;
 }
 
 .appImage2 {
-  background: url("images/projects/app2.png");
+  background: url("images/projects/calculatorIcon.jpg");
   background-position: center;
   background-size: 100% auto;
 }
 
 .appImage3 {
-  background: url("images/projects/app3.png");
+  background: url("images/projects/magic8Cube.jpg");
   background-position: center;
   background-size: 100% auto;
 }
 
 .appImage4 {
-  background: url("images/projects/app4.png");
+  background: url("images/projects/clockIcon.jpg");
   background-position: center;
   background-size: 100% auto;
 }
 
 .appImage5 {
-  background: url("images/projects/app5.png");
+  background: url("images/projects/battleshipsIcon.jpg");
   background-position: center;
   background-size: 100% auto;
 }
 
 .appImage6 {
-  background: url("images/projects/app6.jpg");
+  background: url("images/projects/moreAppsIcon.jpg");
   background-position: center;
   background-size: 100% auto;
 }

@@ -1,10 +1,13 @@
 var btnPlay = document.getElementById("btnPlay");
-var cell1 = document.getElementById("cell1");
-var cell2 = document.getElementById("cell2");
-var cell3 = document.getElementById("cell3");
-var cell4 = document.getElementById("cell4");
-var cell5 = document.getElementById("cell5");
-var cell6 = document.getElementById("cell6");
+var cells = [cell1, cell2, cell3, cell4, cell5, cell6];
+cells[0] = document.getElementById("cell1");
+cells[1] = document.getElementById("cell2");
+cells[2] = document.getElementById("cell3");
+cells[3] = document.getElementById("cell4");
+cells[4] = document.getElementById("cell5");
+cells[5] = document.getElementById("cell6");
+
+
 
 var gameStarted = false;
 var location1;
@@ -23,11 +26,13 @@ function setHoverColour(cell, hoverColour, hoverOutColour) {
   }
 }
 
-function resetCell(cell, text) {
-  cell.classList.remove("hit");
-  cell.style.color = "wheat";
-  cell.style.backgroundColor = "#333"
-  cell.innerHTML = text;
+function resetCell() {
+  for (var i = 0; i < 6; i++){
+    cells[i].classList.remove("hit");
+    cells[i].style.color = "wheat";
+    cells[i].style.backgroundColor = "#333"
+    cells[i].innerHTML = [i + 1];
+  }
 }
 
 function styleCell(cell, text, color, backgroundColor) {
@@ -52,12 +57,9 @@ function gameStart() {
     guess = 0;
     guessesRemaining = 3
     hits = 0;
-    resetCell(cell1, "1");
-    resetCell(cell2, "2");
-    resetCell(cell3, "3");
-    resetCell(cell4, "4");
-    resetCell(cell5, "5");
-    resetCell(cell6, "6");
+    var cell;
+    var text;
+    resetCell();
     setHoverColour(cell1, "tomato", "#333");
     setHoverColour(cell2, "tomato", "#333");
     setHoverColour(cell3, "tomato", "#333");
