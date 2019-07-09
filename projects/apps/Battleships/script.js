@@ -1,4 +1,7 @@
 var btnPlay = document.getElementById("btnPlay");
+var pressPlayWindow = document.getElementById("pressPlayWindow");
+var pressPlayImg = document.getElementById("pressPlayImg");
+var preFireText = document.getElementById("preFireText");
 var cells = [cell1, cell2, cell3, cell4, cell5, cell6];
 cells[0] = document.getElementById("cell1");
 cells[1] = document.getElementById("cell2");
@@ -16,6 +19,10 @@ var location3;
 var guess;
 var guessesRemaining = 3;
 var hits = 0;
+
+function setDisplay (element, value) {
+  element.style.display = value;
+}
 
 function setHoverColour(cell, hoverColour, hoverOutColour) {
   cell.onmouseover = function() {
@@ -60,47 +67,32 @@ function gameStart() {
     var cell;
     var text;
     resetCell();
-    setHoverColour(cell1, "tomato", "#333");
-    setHoverColour(cell2, "tomato", "#333");
-    setHoverColour(cell3, "tomato", "#333");
-    setHoverColour(cell4, "tomato", "#333");
-    setHoverColour(cell5, "tomato", "#333");
-    setHoverColour(cell6, "tomato", "#333");
+    setDisplay(pressPlayWindow, "none");
+    setDisplay(pressPlayImg, "none");
+    setDisplay(preFireText, "block");
+    setDisplay(pressPlayImg, "block");
+    for (var i = 0; i < cells.length; i++) {
+      setHoverColour(cells[i], "tomato", "#333");
+    }
   }
 }
 
 function winGame() {
   gameStarted = false;
   btnPlay.innerHTML = "Restart";
-  styleCell(cell1, "Win!","whitesmoke", "steelblue");
-  styleCell(cell2, "Win!","whitesmoke", "steelblue");
-  styleCell(cell3, "Win!","whitesmoke", "steelblue");
-  styleCell(cell4, "Win!","whitesmoke", "steelblue");
-  styleCell(cell5, "Win!","whitesmoke", "steelblue");
-  styleCell(cell6, "Win!","whitesmoke", "steelblue");
-  setHoverColour(cell1, "steelblue", "steelblue");
-  setHoverColour(cell2, "steelblue", "steelblue");
-  setHoverColour(cell3, "steelblue", "steelblue");
-  setHoverColour(cell4, "steelblue", "steelblue");
-  setHoverColour(cell5, "steelblue", "steelblue");
-  setHoverColour(cell6, "steelblue", "steelblue");
+  for (i = 0; i < cells.length; i++) {
+    styleCell(cells[i], "Win!","whitesmoke", "steelblue");
+    setHoverColour(cells[i], "steelblue", "steelblue");
+  }
 }
 
 function loseGame() {
   gameStarted = false;
   btnPlay.innerHTML = "Restart";
-  styleCell(cell1, "Lose!","whitesmoke", "crimson");
-  styleCell(cell2, "Lose!","whitesmoke", "crimson");
-  styleCell(cell3, "Lose!","whitesmoke", "crimson");
-  styleCell(cell4, "Lose!","whitesmoke", "crimson");
-  styleCell(cell5, "Lose!","whitesmoke", "crimson");
-  styleCell(cell6, "Lose!","whitesmoke", "crimson");
-  setHoverColour(cell1, "crimson", "crimson");
-  setHoverColour(cell2, "crimson", "crimson");
-  setHoverColour(cell3, "crimson", "crimson");
-  setHoverColour(cell4, "crimson", "crimson");
-  setHoverColour(cell5, "crimson", "crimson");
-  setHoverColour(cell6, "crimson", "crimson");
+  for (var i = 0; i < cells.length; i++) {
+    styleCell(cells[i], "Lose!","whitesmoke", "crimson");
+    setHoverColour(cells[i], "crimson", "crimson");
+  }
 }
 
 function attackCell(cellLocation, cell) {
