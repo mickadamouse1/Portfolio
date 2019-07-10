@@ -1,7 +1,3 @@
-var btnPlay = document.getElementById("btnPlay");
-var pressPlayWindow = document.getElementById("pressPlayWindow");
-var pressPlayImg = document.getElementById("pressPlayImg");
-var preFireText = document.getElementById("preFireText");
 var cells = [cell1, cell2, cell3, cell4, cell5, cell6];
 cells[0] = document.getElementById("cell1");
 cells[1] = document.getElementById("cell2");
@@ -10,8 +6,6 @@ cells[3] = document.getElementById("cell4");
 cells[4] = document.getElementById("cell5");
 cells[5] = document.getElementById("cell6");
 
-
-
 var gameStarted = false;
 var location1;
 var location2;
@@ -19,6 +13,39 @@ var location3;
 var guess;
 var guessesRemaining = 3;
 var hits = 0;
+
+var btnPlay = document.getElementById("btnPlay");
+
+var pressPlayText = document.getElementById("pressPlayWindow");
+var preFireText = document.getElementById("preFireText");
+var missWindowText = document.getElementById("missWindowText");
+var hitWindowText = document.getElementById("hitWindowText");
+var loseWindowText = document.getElementById("loseWindowText");
+var winWindowText = document.getElementById("winWindowText");
+var alreadyPlayingText = document.getElementById("alreadyPlayingText");
+
+var pressPlayImg = document.getElementById("preFireImg");
+var preFireImg = document.getElementById("preFireImg");
+var postFireImg = document.getElementById("postFireImg");
+var winWindowImg = document.getElementById("winImg");
+var loseWindowImg = document.getElementById("loseImg");
+
+
+
+function hideWindowItems() {
+  pressPlayText.style.display = "none";
+  preFireText.style.display = "none";
+  missWindowText.style.display = "none";
+  hitWindowText.style.display = "none";
+  winWindowText.style.display = "none";
+  loseWindowText.style.display = "none";
+  alreadyPlayingText.style.display = "none";
+  pressPlayImg.style.display = "none";
+  preFireImg.style.display = "none";
+  postFireImg.style.display = "none";
+  winWindowImg.style.display = "none";
+  loseWindowImg.style.display = "none";
+}
 
 function setDisplay (element, value) {
   element.style.display = value;
@@ -50,7 +77,9 @@ function styleCell(cell, text, color, backgroundColor) {
 
 function gameStart() {
   if (gameStarted == true) {
-    console.log("Finish the current game!");
+    hideWindowItems();
+    setDisplay(alreadyPlayingText, "block");
+    setDisplay(preFireImg, "block");
   } else {
     btnPlay.innerHTML = "Play";
     gameStarted = true;
@@ -67,10 +96,9 @@ function gameStart() {
     var cell;
     var text;
     resetCell();
-    setDisplay(pressPlayWindow, "none");
-    setDisplay(pressPlayImg, "none");
+    hideWindowItems();
     setDisplay(preFireText, "block");
-    setDisplay(pressPlayImg, "block");
+    setDisplay(preFireImg, "block");
     for (var i = 0; i < cells.length; i++) {
       setHoverColour(cells[i], "tomato", "#333");
     }
@@ -84,6 +112,9 @@ function winGame() {
     styleCell(cells[i], "Win!","whitesmoke", "steelblue");
     setHoverColour(cells[i], "steelblue", "steelblue");
   }
+  hideWindowItems();
+  setDisplay(winWindowImg, "block");
+  setDisplay(winWindowText, "block");
 }
 
 function loseGame() {
@@ -93,6 +124,9 @@ function loseGame() {
     styleCell(cells[i], "Lose!","whitesmoke", "crimson");
     setHoverColour(cells[i], "crimson", "crimson");
   }
+  hideWindowItems();
+  setDisplay(loseWindowImg, "block");
+  setDisplay(loseWindowText, "block");
 }
 
 function attackCell(cellLocation, cell) {
@@ -109,11 +143,14 @@ function attackCell(cellLocation, cell) {
   } else if (cell.innerHTML == "Miss!") {
     console.log("Try A Different Location!");
   } else if (guess == location1 || guess == location2 || guess == location3) {
-    setHoverColour(cell, "crimson", "crimson");
     hits++;
     guessesRemaining--;
     console.log(`${guessesRemaining} Guesses Remaining.`);
     styleCell(cell, "Hit!", "white", "crimson");
+    setHoverColour(cell, "crimson", "crimson");
+    hideWindowItems();
+    setDisplay(hitWindowText, "block");
+    setDisplay(postFireImg, "block");
     if (hits == 3) {
       console.log("WIN");
       winGame();
@@ -122,6 +159,9 @@ function attackCell(cellLocation, cell) {
       loseGame();
     }
   } else {
+    hideWindowItems();
+    setDisplay(missWindowText, "block");
+    setDisplay(postFireImg, "block");
     styleCell(cell, "Miss!", "white", "#00171F");
     setHoverColour(cell, "#00171F", "#00171F");
     cell.innerHTML = "Miss!"

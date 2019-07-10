@@ -23,7 +23,7 @@ body {
   background: #333;
   height: 100px;
   margin: auto;
-  width: 50%;
+  width: 40%;
 }
 
 .cell {
@@ -56,14 +56,45 @@ body {
 /* GAME TEXT WINDOW */
 /* GAME TEXT WINDOW */
 
+#preFireImg,
+#postFireImg,
+#winImg,
+#loseImg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: none;
+}
+
+#preFireImg {
+  background-image: url("images/preFire.jpg");
+  display: block;
+}
+
+#postFireImg {
+  background-image: url("images/postFire.jpg");
+}
+
+#winImg {
+  background-image: url("images/winGame.jpg");
+}
+
+#loseImg {
+  background-image: url("images/loseGame.jpg");
+}
+
+
 #outPutScreen {
   justify-content: center;
   display: grid;
   grid-template-columns: 29% 71%;
-  width: 75%;
+  width: 50%;
+  height: 390px;
   margin: auto;
   background: coral;
   border: solid 4px #333;
+  font-size: 30px;
+  color: maroon;
 }
 
 #outPutScreen p {
@@ -72,18 +103,18 @@ body {
 
 /* CLICK TO PLAY WINDOW*/
 
-#pressPlayWindow {
-  display: ;
+#pressPlayWindow,
+#preFireText,
+#hitWindowText,
+#missWindowText,
+#loseWindowText,
+#winWindowText,
+#alreadyPlayingText {
   border-left: solid 4px #333;
   padding: 10px;
-  font-size: 30px;
-  color: maroon;
+  display: none;
 }
 
-#preFireText {
-  display: none;
-  border-left: solid 4px #333;
-  padding: 10px;
-  font-size: 30px;
-  color: maroon;
+#pressPlayWindow {
+  display: block;
 }
