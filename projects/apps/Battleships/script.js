@@ -30,6 +30,8 @@ var postFireImg = document.getElementById("postFireImg");
 var winWindowImg = document.getElementById("winImg");
 var loseWindowImg = document.getElementById("loseImg");
 
+var guessesRemainingText = document.getElementById("guessesRemainingText");
+var hitsText = document.getElementById("hitsText");
 
 
 function hideWindowItems() {
@@ -45,6 +47,11 @@ function hideWindowItems() {
   postFireImg.style.display = "none";
   winWindowImg.style.display = "none";
   loseWindowImg.style.display = "none";
+}
+
+function updateScoreText() {
+  hitsText.innerHTML = hits;
+  guessesRemainingText.innerHTML = guessesRemaining;
 }
 
 function setDisplay (element, value) {
@@ -86,19 +93,14 @@ function gameStart() {
     location1 = Math.floor(Math.random() * (5 - 1) + 1);
     location2 = location1 + 1;
     location3 = location2 + 1;
-    console.log("Game Start!");
-    console.log(location1);
-    console.log(location2);
-    console.log(location3);
+    console.log(`Locations: ${location1}, ${location2}, ${location3}.`)
     guess = 0;
     guessesRemaining = 3
     hits = 0;
-    var cell;
-    var text;
     resetCell();
     hideWindowItems();
     setDisplay(preFireText, "block");
-    setDisplay(preFireImg, "block");
+    setDisplay(preFireImg, "flex");
     for (var i = 0; i < cells.length; i++) {
       setHoverColour(cells[i], "tomato", "#333");
     }
@@ -113,7 +115,7 @@ function winGame() {
     setHoverColour(cells[i], "steelblue", "steelblue");
   }
   hideWindowItems();
-  setDisplay(winWindowImg, "block");
+  setDisplay(winWindowImg, "flex");
   setDisplay(winWindowText, "block");
 }
 
@@ -125,52 +127,42 @@ function loseGame() {
     setHoverColour(cells[i], "crimson", "crimson");
   }
   hideWindowItems();
-  setDisplay(loseWindowImg, "block");
+  setDisplay(loseWindowImg, "flex");
   setDisplay(loseWindowText, "block");
 }
 
 function attackCell(cellLocation, cell) {
   guess = cellLocation;
-  console.log(`guess: ${guess}`);
   if (gameStarted == false) {
-    console.log("*PRESS PLAY TO START*");
   } else if (hits == 3) {
-    console.log("You Already Won!");
   } else if (guessesRemaining == 0) {
-    console.log("You Already Lost!");
   } else if (cell.innerHTML == "Hit!") {
-    console.log("Try A Different Location!");
   } else if (cell.innerHTML == "Miss!") {
-    console.log("Try A Different Location!");
   } else if (guess == location1 || guess == location2 || guess == location3) {
     hits++;
     guessesRemaining--;
-    console.log(`${guessesRemaining} Guesses Remaining.`);
+    updateScoreText();
     styleCell(cell, "Hit!", "white", "crimson");
     setHoverColour(cell, "crimson", "crimson");
     hideWindowItems();
     setDisplay(hitWindowText, "block");
-    setDisplay(postFireImg, "block");
+    setDisplay(postFireImg, "flex");
     if (hits == 3) {
-      console.log("WIN");
       winGame();
     } else if (guessesRemaining == 0) {
-      console.log("LOSE");
       loseGame();
     }
   } else {
+    guessesRemaining--;
     hideWindowItems();
     setDisplay(missWindowText, "block");
-    setDisplay(postFireImg, "block");
+    setDisplay(postFireImg, "flex");
     styleCell(cell, "Miss!", "white", "#00171F");
     setHoverColour(cell, "#00171F", "#00171F");
-    cell.innerHTML = "Miss!"
-    guessesRemaining--;
+    updateScoreText();
     if (guessesRemaining == 0) {
-      console.log("LOSE");
       loseGame();
     }
-    console.log(`${guessesRemaining} Guesses Remaining.`);
   }
 }
 
