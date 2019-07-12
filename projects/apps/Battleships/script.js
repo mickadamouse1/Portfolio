@@ -97,6 +97,7 @@ function gameStart() {
     guess = 0;
     guessesRemaining = 3
     hits = 0;
+    updateScoreText();
     resetCell();
     hideWindowItems();
     setDisplay(preFireText, "block");
