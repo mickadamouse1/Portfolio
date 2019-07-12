@@ -76,10 +76,15 @@ function resetCell() {
   }
 }
 
-function styleCell(cell, text, color, backgroundColor) {
+function styleCell(cell, text) {
   cell.innerHTML = text;
-  cell.style.color = color;
-  cell.style.backgroundColor = backgroundColor;
+  if (text == "Win!" || text == "Hit!") {
+    cell.style.color = "whitesmoke";
+    cell.style.backgroundColor = "steelblue";
+  } else if (text == "Lose!" || text == "Miss!") {
+    cell.style.color = "white";
+    cell.style.backgroundColor = "crimson";
+  }
 }
 
 function gameStart() {
@@ -111,9 +116,9 @@ function gameStart() {
 function winGame() {
   gameStarted = false;
   btnPlay.innerHTML = "Restart";
-  for (i = 0; i < cells.length; i++) {
-    styleCell(cells[i], "Win!","whitesmoke", "steelblue");
-    setHoverColour(cells[i], "steelblue", "steelblue");
+  for (var i = 0; i < cells.length; i++) {
+    styleCell(cells[i], "Win!");
+    setHoverColour(cells[i]);
   }
   hideWindowItems();
   setDisplay(winWindowImg, "flex");
@@ -124,8 +129,8 @@ function loseGame() {
   gameStarted = false;
   btnPlay.innerHTML = "Restart";
   for (var i = 0; i < cells.length; i++) {
-    styleCell(cells[i], "Lose!","whitesmoke", "crimson");
-    setHoverColour(cells[i], "crimson", "crimson");
+    styleCell(cells[i], "Lose!");
+    setHoverColour(cells[i]);
   }
   hideWindowItems();
   setDisplay(loseWindowImg, "flex");
@@ -143,8 +148,8 @@ function attackCell(cellLocation, cell) {
     hits++;
     guessesRemaining--;
     updateScoreText();
-    styleCell(cell, "Hit!", "white", "crimson");
-    setHoverColour(cell, "crimson", "crimson");
+    styleCell(cell, "Hit!");
+    setHoverColour(cell);
     hideWindowItems();
     setDisplay(hitWindowText, "block");
     setDisplay(postFireImg, "flex");
@@ -158,8 +163,8 @@ function attackCell(cellLocation, cell) {
     hideWindowItems();
     setDisplay(missWindowText, "block");
     setDisplay(postFireImg, "flex");
-    styleCell(cell, "Miss!", "white", "#00171F");
-    setHoverColour(cell, "#00171F", "#00171F");
+    styleCell(cell, "Miss!");
+    setHoverColour(cell);
     updateScoreText();
     if (guessesRemaining == 0) {
       loseGame();
@@ -167,11 +172,11 @@ function attackCell(cellLocation, cell) {
   }
 }
 
-btnPlay.onclick = function(){gameStart()}
+btnPlay.onclick = function(){gameStart();}
 
-cell1.onclick = function(){attackCell(1, cell1)}
-cell2.onclick = function(){attackCell(2, cell2)}
-cell3.onclick = function(){attackCell(3, cell3)}
-cell4.onclick = function(){attackCell(4, cell4)}
-cell5.onclick = function(){attackCell(5, cell5)}
-cell6.onclick = function(){attackCell(6, cell6)}
+cell1.onclick = function(){attackCell(1, cell1);}
+cell2.onclick = function(){attackCell(2, cell2);}
+cell3.onclick = function(){attackCell(3, cell3);}
+cell4.onclick = function(){attackCell(4, cell4);}
+cell5.onclick = function(){attackCell(5, cell5);}
+cell6.onclick = function(){attackCell(6, cell6);}
