@@ -330,7 +330,7 @@ input, label {
 }
 
 .appImage3 {
-  background: url("images/projects/magic8Cube.jpg");
+  background: url("images/projects/CoverArt.png");
   background-position: center;
   background-size: 100% auto;
 }
@@ -348,10 +348,16 @@ input, label {
 }
 
 .appImage6 {
-  background: url("images/projects/moreAppsIcon.jpg");
+  background: url("images/projects/magic8Cube.jpg");
   background-position: center;
   background-size: 100% auto;
 }
+
+/* .appImage7 {
+  background: url("images/projects/moreAppsIcon.jpg");
+  background-position: center;
+  background-size: 100% auto;
+} */
 
 .appName {
   transition: .5s ease;
