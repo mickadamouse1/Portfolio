@@ -22,3 +22,9 @@ UPDATE LOG - by date - Michael Chambers
 -----------------------------------------------------------------------------------------------------------
 11/07/2019 -- Battleships: Improved graphics and overall responsiveness for mobile devices.
 -----------------------------------------------------------------------------------------------------------
+12/07/2019 -- Battleships: Added score tracking mechanics and optimised various aspects of the application
+-----------------------------------------------------------------------------------------------------------
+16/07/2019 -- Added a new project to the protfolio projects section. This app is called "Gladiators".
+-----------------------------------------------------------------------------------------------------------
+17/07/2019 -- Battleships: Optimised via functions. -- Gladiators: Added class names to char selection.
+-----------------------------------------------------------------------------------------------------------

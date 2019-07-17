@@ -16,7 +16,7 @@ body {
   justify-content: center;
 }
 
-#gameScreen button {
+#gameScreen .btnCharSelect {
   background: #f4f4f4;
   width: 100px;
   text-align: center;
@@ -33,5 +33,19 @@ body {
   height: 250px;
   margin: 20px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#btnPlay {
+  margin-bottom: 10px;
+  width: 80%;
+  height: 50px;
+  border: solid black;
+  font-size: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+#btnPlay:hover {
+  background: #f4f4f4;
 }

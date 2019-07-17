@@ -1,9 +1,10 @@
-var nextChar = document.getElementById("nextChar");
-var previousChar = document.getElementById("previousChar");
+var nextChar = document.getElementById("btnNextChar");
+var previousChar = document.getElementById("btnPreviousChar");
+var btnPlay = document.getElementById("btnPlay");
 var characterPanel = document.getElementById("characterPanel");
-var characterList = ["naked", "peasant1", "peasant2", "knight"];
+var characterList = ["Deprived", "Peasant", "Looter", "Knight"];
 var characterImg = ["characters/TEMPLATE.png", "characters/Peasant1.png", "characters/Peasant2.png", "characters/Warrior.png"];
-var characterIndex = characterList.indexOf("naked");
+var characterIndex = characterList.indexOf("Deprived");
 var character = characterList[0];
 var charImg = characterImg[0];
 
@@ -13,7 +14,7 @@ function nextCharacter() {
     var nextImg = characterImg[characterIndex + 1];
     characterIndex = characterList.indexOf(nextChar);
   } else {
-    characterIndex = characterList.indexOf("naked");
+    characterIndex = characterList.indexOf("Deprived");
     nextChar = characterList[characterIndex];
     nextImg = characterImg[characterIndex];
   }
@@ -35,13 +36,14 @@ function previousCharacter() {
     var preImg = characterImg[characterIndex - 1];
     characterIndex = characterList.indexOf(preChar);
   } else {
-    characterIndex = characterList.indexOf("naked");
+    characterIndex = characterList.indexOf("Deprived");
     preChar = characterList[characterIndex];
     preImg = characterImg[characterIndex];
   }
   character = preChar;
   charImg = preImg;
   characterPanel.style.backgroundImage = "url("+ charImg +")";
+  btnPlay.innerHTML = "Play " + character;
   console.log(character);
   console.log(characterIndex);
   console.log(charImg);

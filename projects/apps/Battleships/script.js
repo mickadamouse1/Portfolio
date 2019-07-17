@@ -34,7 +34,7 @@ var guessesRemainingText = document.getElementById("guessesRemainingText");
 var hitsText = document.getElementById("hitsText");
 
 
-function hideWindowItems() {
+function hideWindowItems(item1, value1, item2, value2) {
   pressPlayText.style.display = "none";
   preFireText.style.display = "none";
   missWindowText.style.display = "none";
@@ -47,6 +47,9 @@ function hideWindowItems() {
   postFireImg.style.display = "none";
   winWindowImg.style.display = "none";
   loseWindowImg.style.display = "none";
+
+  item1.style.display = value1;
+  item2.style.display = value2;
 }
 
 function updateScoreText() {
@@ -89,9 +92,7 @@ function styleCell(cell, text) {
 
 function gameStart() {
   if (gameStarted == true) {
-    hideWindowItems();
-    setDisplay(alreadyPlayingText, "block");
-    setDisplay(preFireImg, "block");
+    hideWindowItems(alreadyPlayingText, "block", preFireImg, "block");
   } else {
     btnPlay.innerHTML = "Play";
     gameStarted = true;
@@ -104,9 +105,7 @@ function gameStart() {
     hits = 0;
     updateScoreText();
     resetCell();
-    hideWindowItems();
-    setDisplay(preFireText, "block");
-    setDisplay(preFireImg, "flex");
+    hideWindowItems(preFireText, "block", preFireImg, "flex");
     for (var i = 0; i < cells.length; i++) {
       setHoverColour(cells[i], "tomato", "#333");
     }
@@ -120,9 +119,7 @@ function winGame() {
     styleCell(cells[i], "Win!");
     setHoverColour(cells[i]);
   }
-  hideWindowItems();
-  setDisplay(winWindowImg, "flex");
-  setDisplay(winWindowText, "block");
+  hideWindowItems(winWindowImg, "flex", winWindowText, "block");
 }
 
 function loseGame() {
@@ -132,9 +129,7 @@ function loseGame() {
     styleCell(cells[i], "Lose!");
     setHoverColour(cells[i]);
   }
-  hideWindowItems();
-  setDisplay(loseWindowImg, "flex");
-  setDisplay(loseWindowText, "block");
+  hideWindowItems(loseWindowImg, "flex", loseWindowText, "block");
 }
 
 function attackCell(cellLocation, cell) {
@@ -150,9 +145,7 @@ function attackCell(cellLocation, cell) {
     updateScoreText();
     styleCell(cell, "Hit!");
     setHoverColour(cell);
-    hideWindowItems();
-    setDisplay(hitWindowText, "block");
-    setDisplay(postFireImg, "flex");
+    hideWindowItems(hitWindowText, "block", postFireImg, "flex");
     if (hits == 3) {
       winGame();
     } else if (guessesRemaining == 0) {
@@ -160,9 +153,7 @@ function attackCell(cellLocation, cell) {
     }
   } else {
     guessesRemaining--;
-    hideWindowItems();
-    setDisplay(missWindowText, "block");
-    setDisplay(postFireImg, "flex");
+    hideWindowItems(missWindowText, "block", postFireImg, "flex");
     styleCell(cell, "Miss!");
     setHoverColour(cell);
     updateScoreText();
