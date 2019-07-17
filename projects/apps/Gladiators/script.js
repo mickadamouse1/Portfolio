@@ -21,6 +21,7 @@ function nextCharacter() {
   character = nextChar;
   charImg = nextImg;
   characterPanel.style.backgroundImage = "url("+ charImg +")";
+  btnPlay.innerHTML = "Play " + character;
   console.log(character);
   console.log(characterIndex);
   console.log(charImg);
