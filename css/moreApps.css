@@ -1,0 +1,390 @@
+/* GLOBAL */
+/* GLOBAL */
+/* GLOBAL */
+
+body {
+  margin: 0;
+  background: url("../images/landing page/background2.jpg");
+  background-size: 4px;
+  height: 969px;
+  padding: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.sideNote {
+  background: #3E000C;
+  color: #FFCBDD;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 500px;
+  font-style: italic;
+}
+
+.sidePortrait {
+  width: 160px;
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+input, label {
+  display: block;
+}
+
+/* NAVIGATION */
+/* NAVIGATION */
+/* NAVIGATION */
+
+#navFlexContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 10px 0 0 0;
+  height: 60px;
+}
+
+#nav {
+  width: 100%;
+  background: #FFFFFF;
+  position: fixed;
+  z-index: 1030;
+}
+
+#brand {
+  color: #262730;
+  font-family: "EB Garamond";
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px;
+  display: inline-flex;
+}
+
+#navLinkList {
+  list-style: none;
+  display: inline-flex;
+}
+
+#navIconList {
+  list-style: none;
+  display: inline-flex;
+}
+
+#navAccountIconLink, #navBlogIconLink {
+  color: red;
+  font-size: 30px;
+  padding: 2px 10px;
+  display: inline-flex;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #262730;
+  font-size: 1.4rem;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.navLink:hover {
+  color: black;
+}
+
+.icon {
+  display: none;
+  padding: 3px;
+}
+
+#hamburgerIcon i {
+  padding: 3px;
+  border-radius: 20%;
+}
+
+#hamburgerIcon i:hover {
+  background: #f4f4f4;
+}
+
+/* PROJECTS */
+/* PROJECTS */
+/* PROJECTS */
+
+#projectsSection {
+  height: 969px;
+  min-height: 100vh;
+  padding: 100px 0 20px 0;
+  background: white;
+  position: relative;
+}
+
+#projectsHeader {
+  margin: 0 0 10px;
+  padding-left: 3rem;
+  text-align: left;
+  font-family: "EB Garamond";
+  color: #333;
+  font-size: 5rem;
+}
+
+#apps {
+  text-align: center;
+}
+
+.app {
+  display: inline-block;
+  position: static;
+  width: 29%;
+  height: 300px;
+  margin: 15px 15px;
+}
+
+.appImage1,
+.appImage2,
+.appImage3,
+.appImage4,
+.appImage5,
+.appImage6,
+.appImage7,
+.appImage8,
+.appImage9,
+.appImage10,
+.appImage11,
+.appImage12 {
+  box-shadow: 0 0px 2px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.appImage1 {
+  background: url("../images/projects/magic8Cube.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage2 {
+  background: url("../images/projects/wordCounter.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage3 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage4 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage5 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage6 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage7 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage8 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage9 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage10 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage11 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appImage12 {
+  background: url("../images/projects/placeHolder.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.appName {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 42.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.app:hover .appImage1,
+.app:hover .appImage2,
+.app:hover .appImage3,
+.app:hover .appImage4,
+.app:hover .appImage5,
+.app:hover .appImage6,
+.app:hover .appImage7,
+.app:hover .appImage8,
+.app:hover .appImage9,
+.app:hover .appImage10,
+.app:hover .appImage11,
+.app:hover .appImage12 {
+  opacity: 0.6;
+}
+
+.app:hover .appName {
+  opacity: 1;
+}
+
+.appName {
+  position: relative;
+  top: -50%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.appName a {
+  background-color: #323031;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "EB Garamond";
+  font-weight: 700;
+  padding: 16px 32px;
+  margin: auto 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.appName a:hover {
+  background-color: #084C61;
+}
+
+#projectsArrow img {
+  width: 5rem;
+  opacity: 0.5;
+  margin: 0 auto;
+  display: block;
+}
+
+/* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
+/* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
+/* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
+
+  #projectsSection {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+/* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
+/* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
+/* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
+
+@media (max-width: 990px){
+
+  .navLink {
+    display: none;
+    color: wheat;
+  }
+
+  .navIconItem {
+    display: none;
+    width: 48%;
+    text-align: center;
+  }
+
+  #navFlexContainer a.icon {
+    float: right;
+    display: block;
+    font-size: 25px;
+    color: red;
+    opacity: 0.5;
+  }
+
+  #navLinkList {
+    list-style: none;
+    display: block;
+    position: relative;
+    left: 35%;
+    top: 50px;
+    height: 208px;
+    border-top: #333 solid;
+    border-bottom: #333 solid;
+    background: indianred;
+    padding: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  #navAccountIconLink, #navBlogIconLink {
+    padding: 0;
+    color: wheat;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+
+  #projectsSection {
+    height: 1300px;
+  }
+
+  #projectsHeader {
+    padding-left: 0;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  #apps {
+    text-align: center;
+  }
+
+  .app {
+    width: 45%;
+  }
+}
+
+/* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
+/* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
+/* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
+
+@media (max-width: 769px){
+
+  #projectsSection {
+    height: 2900px;
+  }
+
+  .app {
+    width: 75%;
+    height: 400px;
+  }
+}

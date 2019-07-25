@@ -28,3 +28,5 @@ UPDATE LOG - by date - Michael Chambers
 -----------------------------------------------------------------------------------------------------------
 17/07/2019 -- Battleships: Optimised via functions. -- Gladiators: Added class names to char selection.
 -----------------------------------------------------------------------------------------------------------
+25/07/2019 -- Portfolio: Added More Apps page to catalogue every application developed.
+-----------------------------------------------------------------------------------------------------------
