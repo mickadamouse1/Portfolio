@@ -127,7 +127,7 @@ hr {
 }
 
 #genreSectionStyle {
-  background: url("../images/genreStyle.png");
+  background: url("../images/blog/genreStyle.png");
   height: 100%;
   background-color: rgba(200, 55, 50, 0.2);
 }
@@ -152,37 +152,37 @@ hr {
 }
 
 #genreSoftwareDevelopment {
-  background: url("../images/softwareDevelopment.png") center;
+  background: url("../images/blog/softwareDevelopment.png") center;
   background-size: cover;
   opacity: 0.8;
 }
 
 #genreGamesDevelopment {
-  background: url("../images/gamesDevelopment.jpg") center;
+  background: url("../images/blog/gamesDevelopment.jpg") center;
   background-size: cover;
   opacity: 0.8;
 }
 
 #genreMusicProduction {
-  background: url("../images/musicProduction.jpg") center;
+  background: url("../images/blog/musicProduction.jpg") center;
   background-size: cover;
   opacity: 0.8;
 }
 
 #genreColourSchemes {
-  background: url("../images/colourSchemes.jpg") center;
+  background: url("../images/blog/colourSchemes.jpg") center;
   background-size: cover;
   opacity: 0.8;
 }
 
 #genreHardware {
-  background: url("../images/hardware.jpg") center;
+  background: url("../images/blog/hardware.jpg") center;
   background-size: cover;
   opacity: 0.8;
 }
 
 #genreSoftware {
-  background: url("../images/software.jpg") center;
+  background: url("../images/blog/software.jpg") center;
   background-size: cover;
   opacity: 0.8;
 }
