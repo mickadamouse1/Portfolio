@@ -199,11 +199,32 @@ input, label {
 /* ABOUT ME */
 
 #aboutMeSection {
-  height: 880px;
+  height: 940px;
   position: relative;
   background-size: cover;
   background-position: 275px -100px;
   opacity: 1;
+}
+
+#aboutPug {
+  position: absolute;
+  top: 63%;
+  left: 10%;
+  z-index: -2;
+}
+
+#aboutPug img {
+  width: 20rem;
+}
+
+#aboutPug h4 {
+  font-size: 27px;
+  color: whitesmoke;
+  position: absolute;
+  top: 10%;
+  left: 23%;
+  text-align: center;
+  width: 169px;
 }
 
 #aboutMeSectionBackground {
@@ -217,36 +238,35 @@ input, label {
 #aboutMeHeader {
   font-family: "EB Garamond";
   color: #333;
-  font-size: 5rem;
+  font-size: 6rem;
   text-align: center;
-  width: 420px;
-  margin: 0 auto;
-  border-bottom: solid 1px;
+  float: left;
+}
+
+#aboutMeContent {
+  margin: 50px auto 0 auto;
+  width: 1000px;
 }
 
 #aboutMePortrait {
-  width: 388px;
-  box-shadow: 0 0px 2px;
-  display: inline-block;
+  display: block;
+  background: url("../images/about me/pic.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  float: right;
+}
+
+#aboutMeSection p {
+  font-size: 20px;
+  width: 50%;
   float: left;
-  margin-right: 10px;
+  text-align: justify;
 }
-
-#aboutMeContents {
-  font-size: 1.4rem;
-  font-family: "EB Garamond";
-  margin-top: 25px;
-  padding: 0 0 0 0;
-  /* width: 00px; */
-  background: rgba(255, 255, 255, 0.5);
-  border: dashed 2px rgba(0,0,0, 0.2);
-  overflow: hidden;
-}
-
-.aboutMeText {
-  padding: 5px 0 0 0;
-}
-
 /* SKILLS */
 /* SKILLS */
 /* SKILLS */
