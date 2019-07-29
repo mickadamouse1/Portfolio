@@ -229,7 +229,7 @@ input, label {
 
 #aboutMePortrait {
   display: block;
-  background: url("../images/about me/pic.jpg");
+  background: url("../images/about/pic.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -462,8 +462,9 @@ input, label {
   height: 100vh;
   background: rgba(245,222,179,0.6);
   color: #333;
-  position: static;
+  position: relative;
   font-weight: bold;
+  overflow: hidden;
 }
 
 #contactSectionElementContainer {
@@ -544,6 +545,53 @@ input, label {
   text-align: left;
 }
 
+#contactPug {
+  position: absolute;
+  top: 30%;
+  left: 67%;
+  opacity: 0.8;
+}
+
+#contactPug img {
+  width: 30rem;
+}
+
+#contactPug2 {
+  position: absolute;
+  top: 86.6%;
+  left: 5%;
+  opacity: 0.7;
+  box-shadow: 0 0 0 rgba(0,0,0,);
+}
+
+#contactPug2 img {
+  width: 30rem;
+}
+
+#contactPug2 h4 {
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  color: white;
+  font-size: 1.1rem;
+  width: 6rem;
+  text-align: center;
+}
+
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+
+#footer {
+  height: 500px;
+  background: #333;
+  border-top: dashed 5px #222;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
@@ -613,6 +661,10 @@ input, label {
 
   #contactForm {
     width: 65%;
+  }
+
+  #contactPug {
+    display: none;
   }
 }
 
