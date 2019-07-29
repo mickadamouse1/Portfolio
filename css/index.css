@@ -1,4 +1,4 @@
-/* GLOBAL */
+//* GLOBAL */
 /* GLOBAL */
 /* GLOBAL */
 
@@ -206,27 +206,6 @@ input, label {
   opacity: 1;
 }
 
-#aboutPug {
-  position: absolute;
-  top: 63%;
-  left: 10%;
-  z-index: -2;
-}
-
-#aboutPug img {
-  width: 20rem;
-}
-
-#aboutPug h4 {
-  font-size: 27px;
-  color: whitesmoke;
-  position: absolute;
-  top: 10%;
-  left: 23%;
-  text-align: center;
-  width: 169px;
-}
-
 #aboutMeSectionBackground {
   background: rgba(255,255,255,0.6);
   width: 100%;
@@ -267,6 +246,28 @@ input, label {
   float: left;
   text-align: justify;
 }
+
+#aboutPug {
+  position: absolute;
+  top: 65.2%;
+  left: 3%;
+  z-index: -2;
+}
+
+#aboutPug img {
+  width: 19rem;
+}
+
+#aboutPug h4 {
+  font-size: 27px;
+  color: whitesmoke;
+  position: absolute;
+  top: 10%;
+  left: 23%;
+  text-align: center;
+  width: 169px;
+}
+
 /* SKILLS */
 /* SKILLS */
 /* SKILLS */
@@ -598,35 +599,16 @@ input, label {
     right: 0;
   }
 
-  #aboutMeSection {
-    background: rgba(255, 255, 255, 0.6);
+  #aboutMeContent {
+    padding: 0 56px;
   }
 
-  #aboutMeHeader {
-    text-align: left;
-    padding-left: 1.8rem;
-  }
-
-  #aboutMeContents {
-    width: 94%;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .aboutMeText {
-    padding: 3px 0 0 0;
+  #aboutMeSection p {
+    width: 56%;
   }
 
   #skillsSection h1 {
     padding-left: 1.3rem;
-  }
-
-  #skillsSection {
-    background: rgba(255, 255, 255, 0.6);
-  }
-
-  #projectsSection {
-    background: rgba(255, 255, 255, 0.6);
   }
 
   #contactForm {
@@ -681,23 +663,33 @@ input, label {
   }
 
   #aboutMeSection {
-    height: 850px;
+    height: 1080px;
+  }
+
+  #aboutMeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
   }
 
   #aboutMeHeader {
     text-align: center;
-  }
-
-  #aboutMeContents {
-    width: 100%;
+    font-size: 6.7rem;
   }
 
   #aboutMePortrait {
-    width: 318px;
+    width: 32rem;
+    float: none;
   }
 
-  .aboutMeText {
-    padding: 10px 0 0 0;
+  #aboutMeSection p {
+    width: 92%;
+  }
+
+  #aboutPug {
+    display: none;
   }
 
   #skillsSection {
@@ -757,23 +749,19 @@ input, label {
 
 @media (max-width: 769px){
   #aboutMeSection {
-    height: 1150px;
-  }
-
-  #aboutMeHeader {
-    text-align: center;
-    font-size: 5rem;
+    height: 1100px;
   }
 
   #aboutMePortrait {
-    display: block;
-    float: none;
-    margin: 0 auto;
   }
 
-  .aboutMeText {
-    text-align: center;
-    font-size: 1.3rem;
+  #aboutMeHeader {
+    width: 32rem;
+    font-size: 6rem;
+  }
+
+  #aboutMeSection p {
+    width: 30rem;
   }
 
   #skillsSection {

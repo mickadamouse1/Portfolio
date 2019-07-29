@@ -30,3 +30,8 @@ UPDATE LOG - by date - Michael Chambers
 -----------------------------------------------------------------------------------------------------------
 25/07/2019 -- Portfolio: Added More Apps page to catalogue every application developed.
 -----------------------------------------------------------------------------------------------------------
+26/07/2019 -- Porfolio: Began redesigning portfolio sections (projects & about me).
+-----------------------------------------------------------------------------------------------------------
+27/07/2019 -- Porfolio: Added first draft of the About Me page redesign.
+-----------------------------------------------------------------------------------------------------------
+28/07/2019 -- Porfolio: Completed about me redesign and responsitivity.
