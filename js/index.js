@@ -1,6 +1,9 @@
 var navLinks = document.getElementsByClassName("navLink");
 var navLinkList = document.getElementById("navLinkList");
 var navIcons = document.getElementById("navLinkList").getElementsByClassName("navIconItem");
+var btnStart = document.getElementById("btnGetStarted");
+var landingPage = document.getElementById("landingPage");
+var nav = document.getElementById("nav");
 var navLinkVisability = false;
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 var timeout = true;
@@ -67,3 +70,17 @@ window.addEventListener('resize', function() {
     setIdVisability(navLinkList, "block");
   }
 }, false);
+
+btnStart.onclick = function() {
+  document.body.style.overflow = "visible";
+  landingPage.classList.toggle("fade");
+  setTimeout(function(){
+    landingPage.style.display = "none";
+  }, 200);
+  document.getElementById("aboutMeSection").classList.toggle("fadein");
+  nav.classList.toggle("fadein");
+};
+
+window.onbeforeunload = function() {
+  window.scrollTo(0,0);
+}

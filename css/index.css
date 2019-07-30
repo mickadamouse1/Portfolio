@@ -13,6 +13,7 @@ body {
   background-size: 400px;
   height: 969px;
   padding: 0;
+  overflow: hidden;
 }
 
 .noselect {
@@ -52,6 +53,28 @@ input, label {
   padding: 100px 0 20px 0;
 }
 
+/* ANIMATION ANIMATION ANIMATION */
+/* ANIMATION ANIMATION ANIMATION */
+/* ANIMATION ANIMATION ANIMATION */
+
+@keyframes txtFadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundFadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
 /* NAVIGATION */
 /* NAVIGATION */
 /* NAVIGATION */
@@ -69,6 +92,13 @@ input, label {
   background: #FFFFFF;
   position: fixed;
   z-index: 1030;
+  display: ;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#nav.fadein {
+  opacity: 1;
 }
 
 #brand {
@@ -135,63 +165,66 @@ input, label {
   display: flex;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+#landingPage.fade {
+  opacity: 0;
 }
 
 #landingPageBackground {
   width: 100%;
   height: 100%;
-  display: block;
   position: absolute;
-  background: url("../images/landing page/background2.jpg");
+  background: url("../images/landing page/bg8.jpg");
   background-size: cover;
-  background-position: 400px -10%;
-  opacity: 0.6;
+  background-position: center;
+  opacity: 0.9;
 }
 
 #landingPageHeaderGroup {
-  position: static;
   margin: auto;
-  width: 600px;
-  height: 600px;
+  height: 40rem;
+  animation: txtFadein 1s;
+  text-shadow: -3px 3px 5px rgba(0,0,0,0.2);
+  color: snow;
+  opacity: 0.7;
+  text-align: center;
 }
 
-#michaelJap {
-  font-size: 5rem;
-  color: #262730;
-  position: absolute;
-  top: 263px;
-  left: 18.5%;
-  font-weight: 700;
-}
-
-#michaelEng {
+#michaelJap, #chambersJap {
   font-size: 7rem;
-  color: #262730;
+  font-weight: 700;
+  line-height: 7rem;
+}
+
+#michaelEng, #chambersEng {
+  font-size: 9rem;
   font-family: "EB Garamond";
   font-weight: 500;
-  position: absolute;
-  top: 325px;
-  left: 24.5%;
+  line-height: 6rem;
 }
 
-#chambersEng {
-  font-size: 7rem;
-  color: #262730;
-  font-family: "EB Garamond";
-  font-weight: 500;
+#landingPage button {
   position: absolute;
-  top: 425px;
-  left: 26.5%;
-}
-
-#chambersJap {
-  font-size: 5rem;
-  color: #262730;
-  font-weight: 300;
-  position: absolute;
-  top: 540px;
-  left: 21%;
-  font-weight: 700;
+  bottom: 2%;
+  right: 0;
+  left: 0;
+  width: 150px;
+  height: 50px;
+  opacity: 0.7;
+  z-index: 2;
+  background: #333;
+  border: solid;
+  border-radius: 0.5rem;
+  color: snow;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 /* ABOUT ME */
@@ -199,10 +232,15 @@ input, label {
 /* ABOUT ME */
 
 #aboutMeSection {
-  height: 940px;
+  height: 970px;
   position: relative;
   background-size: cover;
   background-position: 275px -100px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#aboutMeSection.fadein {
   opacity: 1;
 }
 
@@ -249,9 +287,10 @@ input, label {
 
 #aboutPug {
   position: absolute;
-  top: 65.2%;
+  bottom: 0;
   left: 3%;
-  z-index: -2;
+  z-index: -1;
+  opacity: 0.7;
 }
 
 #aboutPug img {
@@ -558,7 +597,7 @@ input, label {
 
 #contactPug2 {
   position: absolute;
-  top: 86.6%;
+  bottom: 0;
   left: 5%;
   opacity: 0.7;
   box-shadow: 0 0 0 rgba(0,0,0,);
@@ -597,54 +636,17 @@ input, label {
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
 
 @media (max-width: 1200px) {
-  #landingPageBackground {
-    background: url("../images/landing page/background2.jpg");
-    background-size: 2750px;
-    background-position: 49.1%;
-    opacity: 0.6;
-    height: 100vh;
-    display: flex;
-    margin: 0;
-    padding: 0;
+
+  #michaelJap, #chambersJap {
+    font-size: 7rem;
+    font-weight: 300;
+    line-height: 6rem;
   }
 
-  #michaelJap {
+  #michaelEng, #chambersEng {
+    font-size: 8rem;
     font-weight: 300;
-    position: relative;
-    text-align: center;
-    top: 60px;
-    left: 0;
-    right: 0;
-  }
-
-  #michaelEng {
-    font-size: 5.5rem;
-    font-weight: 300;
-    position: relative;
-    text-align: center;
-    top: 30px;
-    left: 0;
-    right: 0;
-  }
-
-  #chambersEng {
-    font-size: 5.5rem;
-    font-weight: 300;
-    position: relative;
-    text-align: center;
-    top: -7px;
-    left: 0;
-    right: 0;
-  }
-
-  #chambersJap {
-    font-size: 4.5rem;
-    font-weight: 300;
-    position: relative;
-    text-align: center;
-    top: -36px;
-    left: 0;
-    right: 0;
+    line-height: 6rem;
   }
 
   #aboutMeContent {
