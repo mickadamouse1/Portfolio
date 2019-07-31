@@ -3,17 +3,25 @@ var aboutMeSection = document.getElementById("aboutMeSection");
 var skillsSection = document.getElementById("skillsSection");
 var projectsSection = document.getElementById("projectsSection");
 
+var btnHome = document.getElementById("btnHome");
+var btnAbout = document.getElementById("btnAbout");
+var btnSkills = document.getElementById("btnSkills");
+var btnProjects = document.getElementById("btnProjects");
+var btnContact = document.getElementById("btnContact");
+
 var navLinks = document.getElementsByClassName("navLink");
 var navLinkList = document.getElementById("navLinkList");
 var navIcons = document.getElementById("navLinkList").getElementsByClassName("navIconItem");
 var btnStart = document.getElementById("btnGetStarted");
-var btnHome = document.getElementById("btnHome");
 var nav = document.getElementById("nav");
 var navLinkVisability = false;
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 var timeout = true;
 var dropDownStatus = false;
 
+window.onbeforeunload = function() {
+  window.scrollTo(0,0);
+}
 
 // *CLASS SELECTION FUNCTION* Change display value by inputting the parameters (element, value)
 function setClassVisability(element, value) {
@@ -34,20 +42,38 @@ function setAllClassWithinIdVisability(variableName, value){
   };
 }
 
+function showDropdown() {
+  setClassVisability(navLinks, "block");
+  setAllClassWithinIdVisability(navIcons, "inline-block");                 // set the navigation link visability to block using the class selection function (see above)
+  setIdVisability(navLinkList, "block");
+  navLinkVisability = true;
+  dropDownStatus = true;
+  nav.classList.toggle("dropdownStyle");
+  brand.classList.toggle("dropdownStyle");
+}
+
+function hideDropdown(){
+  setClassVisability(navLinks, "none");
+  setClassVisability(navIcons, "none");
+  setIdVisability(navLinkList, "none");
+  navLinkVisability = false;
+  dropDownStatus = false;
+  nav.classList.toggle("dropdownStyle");
+  brand.classList.toggle("dropdownStyle");
+}
+
+function scrollToSection(section) {
+  section.scrollIntoView(true);
+  if (viewportWidth < 990) {
+    hideDropdown();
+  }
+}
+
 hamburgerIcon.onclick = function(){
   if (dropDownStatus == false){
-    setClassVisability(navLinks, "block");
-    setAllClassWithinIdVisability(navIcons, "inline-block");                 // set the navigation link visability to block using the class selection function (see above)
-    setIdVisability(navLinkList, "block");
-    navLinkVisability = true;
-    dropDownStatus = true;
-    navFlexContainer.style.padding = "10px 35px 0 35px";
+    showDropdown();
   } else {
-    setClassVisability(navLinks, "none");
-    setClassVisability(navIcons, "none");
-    navFlexContainer.style.padding = "10px 0 0 0";
-    navLinkVisability = false;
-    dropDownStatus = false;
+    hideDropdown();
   }
 }
 
@@ -85,9 +111,15 @@ btnStart.onclick = function() {
   setTimeout(function(){
     landingPage.style.display = "none";
   }, 200);
-};
+  if (viewportWidth >= 990) {
+    setClassVisability(navLinks, "block");
+    setClassVisability(navIcons, "block");
+    setIdVisability(navLinkList, "inline-flex");
+  }
+}
 
 btnHome.onclick = function() {
+  hideDropdown();
   document.body.style.overflow = "hidden";
   landingPage.style.display = "flex";
   landingPage.classList.toggle("fade");
@@ -99,6 +131,7 @@ btnHome.onclick = function() {
   }, 10);
 }
 
-window.onbeforeunload = function() {
-  window.scrollTo(0,0);
-}
+btnAbout.onclick = function(){scrollToSection(aboutMeSection)}
+btnSkills.onclick = function(){scrollToSection(skillsSection)}
+btnProjects.onclick = function(){scrollToSection(projectsSection)}
+btnContact.onclick = function(){scrollToSection(contactSection)}

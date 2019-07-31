@@ -84,7 +84,7 @@ input, label {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  padding: 10px 0 0 0;
+  align-items: center;
   height: 60px;
 }
 
@@ -107,13 +107,13 @@ input, label {
   font-size: 25px;
   font-weight: 500;
   margin: 0;
-  padding: 5px;
   display: inline-flex;
 }
 
 #navLinkList {
   list-style: none;
   display: inline-flex;
+  margin: 0;
 }
 
 #navIconList {
@@ -335,9 +335,11 @@ input, label {
   margin: 0 0;
   width: 28%;
   display: inline-table;
-  font-family: "EB Garamond";
-  /* font-size: 20px; */
+  font-family: sans-serif;
+}
 
+.skill h5 {
+  font-family: "EB Garamond";
 }
 
 #skillCharts {
@@ -674,14 +676,29 @@ input, label {
 
 @media (max-width: 990px){
 
+  #nav.dropdownStyle {
+    background: #292929;
+  }
+
+  #brand.dropdownStyle {
+    color: wheat;
+  }
+
   .navLink {
     display: none;
     color: wheat;
+    font-size: 50px;
+    padding: 0;
+  }
+
+  .navLink:hover {
+    color: crimson;
+    background: #303030;
   }
 
   .navIconItem {
     display: none;
-    width: 48%;
+    width: 5rem;
     text-align: center;
   }
 
@@ -695,14 +712,15 @@ input, label {
 
   #navLinkList {
     list-style: none;
-    display: block;
-    position: relative;
-    left: 35%;
-    top: 50px;
-    height: 208px;
-    border-top: #333 solid;
-    border-bottom: #333 solid;
-    background: indianred;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    line-height: 5rem;
+    text-align: center;
+    top: 3.7rem;
+    height: 100%;
+    width: 100%;
+    background: #333;
     padding: 0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
