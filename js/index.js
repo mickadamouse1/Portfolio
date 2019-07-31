@@ -88,6 +88,7 @@ btnStart.onclick = function() {
 };
 
 btnHome.onclick = function() {
+  document.body.style.overflow = "hidden";
   landingPage.style.display = "flex";
   landingPage.classList.toggle("fade");
   nav.classList.toggle("fade");
