@@ -1,8 +1,13 @@
+var landingPage = document.getElementById("landingPage");
+var aboutMeSection = document.getElementById("aboutMeSection");
+var skillsSection = document.getElementById("skillsSection");
+var projectsSection = document.getElementById("projectsSection");
+
 var navLinks = document.getElementsByClassName("navLink");
 var navLinkList = document.getElementById("navLinkList");
 var navIcons = document.getElementById("navLinkList").getElementsByClassName("navIconItem");
 var btnStart = document.getElementById("btnGetStarted");
-var landingPage = document.getElementById("landingPage");
+var btnHome = document.getElementById("btnHome");
 var nav = document.getElementById("nav");
 var navLinkVisability = false;
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -73,13 +78,25 @@ window.addEventListener('resize', function() {
 
 btnStart.onclick = function() {
   document.body.style.overflow = "visible";
+  aboutMeSection.classList.toggle("fade");
+  nav.style.display = "flex";
+  nav.classList.toggle("fade");
   landingPage.classList.toggle("fade");
   setTimeout(function(){
     landingPage.style.display = "none";
   }, 200);
-  document.getElementById("aboutMeSection").classList.toggle("fadein");
-  nav.classList.toggle("fadein");
 };
+
+btnHome.onclick = function() {
+  landingPage.style.display = "flex";
+  landingPage.classList.toggle("fade");
+  nav.classList.toggle("fade");
+  aboutMeSection.classList.toggle("fade");
+  nav.style.display = "none";
+  setTimeout(function(){
+  nav.style.display = "flex";
+  }, 10);
+}
 
 window.onbeforeunload = function() {
   window.scrollTo(0,0);
