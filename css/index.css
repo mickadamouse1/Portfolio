@@ -95,6 +95,7 @@ input, label {
   display: ;
   opacity: 0;
   transition: opacity 1s;
+  display: none;
 }
 
 #nav.fadein {
@@ -182,6 +183,7 @@ input, label {
   background-size: cover;
   background-position: center;
   opacity: 0.9;
+  overflow: hidden;
 }
 
 #landingPageHeaderGroup {
@@ -802,6 +804,16 @@ input, label {
 /* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
 
 @media (max-width: 769px){
+  #michaelJap, #chambersJap {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  #michaelEng, #chambersEng {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+
   #aboutMeSection {
     height: 1100px;
   }
