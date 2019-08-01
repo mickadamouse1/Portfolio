@@ -1,3 +1,6 @@
+var isChrome = (navigator.userAgent.toString().toLowerCase().indexOf("chrome") != -1);  // I dont have a clue how this actually works...
+var isFirefox = (navigator.userAgent.toString().toLowerCase().indexOf("firefox") != -1); // Its been two days... I still dont have a clue...
+
 var landingPage = document.getElementById("landingPage");
 var aboutMeSection = document.getElementById("aboutMeSection");
 var skillsSection = document.getElementById("skillsSection");
@@ -21,6 +24,12 @@ var dropDownStatus = false;
 
 window.onbeforeunload = function() {
   window.scrollTo(0,0);
+}
+
+window.onload = function() {
+    setTimeout(function(){
+      window.scrollTo(0,0);
+    }, 0);
 }
 
 // *CLASS SELECTION FUNCTION* Change display value by inputting the parameters (element, value)
@@ -119,12 +128,15 @@ btnStart.onclick = function() {
 }
 
 btnHome.onclick = function() {
-  hideDropdown();
   document.body.style.overflow = "hidden";
+  window.scrollTo(0,0);
+  if (viewportWidth <= 990) {
+    hideDropdown();
+  }
   landingPage.style.display = "flex";
   landingPage.classList.toggle("fade");
-  nav.classList.toggle("fade");
   aboutMeSection.classList.toggle("fade");
+  nav.classList.toggle("fade");
   nav.style.display = "none";
   setTimeout(function(){
   nav.style.display = "flex";

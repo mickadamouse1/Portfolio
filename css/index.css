@@ -686,20 +686,28 @@ input, label {
 
   .navLink {
     display: none;
-    color: wheat;
+    color: wheat !important;
     font-size: 50px;
     padding: 0;
   }
 
   .navLink:hover {
-    color: crimson;
+    color: crimson  !important;
     background: #303030;
   }
 
   .navIconItem {
     display: none;
-    width: 5rem;
+    width: 8rem;
     text-align: center;
+  }
+
+  .navIconItem i {
+    font-size: 3rem;
+  }
+
+  .navIconItem i:hover {
+    color: crimson;
   }
 
   #navFlexContainer a.icon {
