@@ -407,39 +407,39 @@ input, label {
 }
 
 .appImage1 {
-  background: url("../images/projects/bouncyballsIcon.jpg");
+  background: url("../images/projects/battleshipsIcon.jpg");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .appImage2 {
   background: url("../images/projects/calculatorIcon.jpg");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .appImage3 {
   background: url("../images/projects/CoverArt.png");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .appImage4 {
   background: url("../images/projects/clockIcon.jpg");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .appImage5 {
-  background: url("../images/projects/battleshipsIcon.jpg");
+  background: url("../images/projects/bouncyballsIcon.jpg");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .appImage6 {
   background: url("../images/projects/moreAppsIcon.jpg");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .appName {
