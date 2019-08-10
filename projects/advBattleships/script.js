@@ -1,4 +1,4 @@
-var attackScript = document.createElement("script");
+var attackScript = document.createElement("script"); // this links the attack script to this one.
 attackScript.src = "attack.js";
 document.head.appendChild(attackScript);
 
@@ -12,7 +12,7 @@ var hits = 0;
 var gameFinished = false;
 
 var arrCells = [];
-for (var i = 0; i < 64; i++) {
+for (var i = 0; i < 64; i++) { // generates cells
   arrCells[i] = i + 1
 }
 
@@ -32,7 +32,7 @@ var ship2 = {
 };
 
 function generateHorizPos() {
-  var a = Math.floor(Math.random() * 7) + 1;
+  var a = Math.floor(Math.random() * 7) + 1; // generates a postion for horizontal ships to ensure they dont exceed cell limit
   var b = a + 8;
   var c = b + 8;
   var d = c + 8;
@@ -45,7 +45,7 @@ function generateHorizPos() {
 }
 
 function adjustPos() {
-  if (ship2.loc1 == ship1.loc1 || ship2.loc1 == ship1.loc2 || ship2.loc2 == ship1.loc1 || ship2.loc2 == ship1.loc2) {
+  if (ship2.loc1 == ship1.loc1 || ship2.loc1 == ship1.loc2 || ship2.loc2 == ship1.loc1 || ship2.loc2 == ship1.loc2) { // adjust the postion of ships if they overlap
     ship2.loc1 = ship1.loc2 + 1;
     ship2.loc2 = ship2.loc1 + 8;
     console.log("moved");
@@ -56,7 +56,7 @@ function adjustPos() {
   }
 }
 
-function displayShips(shipLoc) {
+function displayShips(shipLoc) { // display ships for DEBUGGING purposes
   var ship1cell = shipLoc;
   if (ship1cell < 9) {
     ship1cell = "a" + ship1cell;
@@ -83,7 +83,7 @@ function restartGame() {
   hits = 0;
   gameFinished = false;
   txtOutput.innerHTML = "...";
-  for (var i = 1; i < arrCells.length; i++) {
+  for (var i = 1; i <= arrCells.length; i++) {
     var cell;
     if (i < 9) {
       cell = "a" + i;
@@ -105,6 +105,10 @@ function restartGame() {
     document.getElementById(cell.toString()).classList.remove("miss");
     document.getElementById(cell.toString()).classList.remove("hit");
     document.getElementById(cell.toString()).innerHTML = cell;
+    txtGuesses.innerHTML = "20";
+    txtHits.innerHTML = "0"
+    ship1.assignLoc();
+    ship2.assignLoc();
   }
 }
 
