@@ -1,7 +1,3 @@
-var attackScript = document.createElement("script"); // this links the attack script to this one.
-attackScript.src = "attack.js";
-document.head.appendChild(attackScript);
-
 var txtGuesses = document.getElementById("txtGuesses");
 var txtHits = document.getElementById("txtHits");
 var txtOutput = document.getElementById("txtOutput");
@@ -13,7 +9,17 @@ var gameFinished = false;
 
 var arrCells = [];
 for (var i = 0; i < 64; i++) { // generates cells
-  arrCells[i] = i + 1
+  arrCells[i] = i + 1;
+}
+console.log(arrCells);
+
+window.onload = init();
+
+function init(){
+  var cells = document.getElementsByClassName("txtCell");
+  for (var i = 0; i < cells.length; i++) {
+    cells[i].onclick = checkHit;
+  }
 }
 
 var ship1 = {
@@ -56,28 +62,6 @@ function adjustPos() {
   }
 }
 
-function displayShips(shipLoc) { // display ships for DEBUGGING purposes
-  var ship1cell = shipLoc;
-  if (ship1cell < 9) {
-    ship1cell = "a" + ship1cell;
-  } else if (ship1cell < 17) {
-    ship1cell = "b" + (ship1cell - 8);
-  } else if (ship1cell < 25) {
-    ship1cell = "c" + (ship1cell - 16);
-  } else if (ship1cell < 33) {
-    ship1cell = "d" + (ship1cell - 24);
-  } else if (ship1cell < 41) {
-    ship1cell = "e" + (ship1cell - 32);
-  } else if (ship1cell < 49) {
-    ship1cell = "f" + (ship1cell - 40);
-  } else if (ship1cell < 57) {
-    ship1cell = "g" + (ship1cell - 48);
-  } else if (ship1cell <= 64) {
-    ship1cell = "h" + (ship1cell - 56);
-  }
-  document.getElementById(ship1cell.toString()).classList.add("ship");
-}
-
 function restartGame() {
   guesses = 20;
   hits = 0;
@@ -112,8 +96,20 @@ function restartGame() {
   }
 }
 
-function checkHit(cell, id) {
-  if (gameFinished) {
+function checkHit(e) {
+  var target = e.currentTarget; // assigns target equal to the Event Object target property
+  var targetId = target.id; // assigns the target id to its own variable for later use in the for loop.
+  var id = document.getElementById(targetId); // assigns a variable named "id" with the id of the targeted cell
+  var cells = document.getElementsByClassName("txtCell"); // used for counting through the for loop (could be replaced).
+  for (var i = 1; i < cells.length; i++) { // A for loop used for translating the cell id into a cell number between 1 & 64.
+    if (cells[i] == id) {
+      var cell = i + 1;
+    }
+    if (cell == undefined) {
+      cell = 1;
+    }
+  }
+  if (gameFinished) { // if the gameFinished variable is false, then the game wont be playable.
     console.log("The game is already over");
     return;
   };
@@ -150,11 +146,6 @@ function checkHit(cell, id) {
 
 ship1.assignLoc();
 ship2.assignLoc();
-
-// displayShips(ship1.loc1);
-// displayShips(ship1.loc2);
-// displayShips(ship2.loc1);
-// displayShips(ship2.loc2);
 
 console.log(ship1.loc1, ship1.loc2);
 console.log(ship2.loc1, ship2.loc2);
