@@ -6,6 +6,14 @@ window.onload = function() {
   var lap = 1;
   var audio = new Audio("audio/ding.wav");
 
+  // Pre-loading background images
+  var redBackground = new Image();
+  var greenBackground = new Image();
+  var blueBackground = new Image();
+  redBackground.src = "images/backgroundRed.jpg";
+  greenBackground.src = "images/backgroundGreen.jpg";
+  blueBackground.src = "images/backgroundBlue.jpg";
+
   // FUNCTION that calculates which is the correct timer to run next. This is based on the laps which are incremented each time a timer is run.
   function runNextTimer(lap) {
     btnContinue.style.display = "block";
@@ -13,7 +21,7 @@ window.onload = function() {
       // RUN BIG BREAK
       console.log("Long Break");
       background.style.background = "rgb(68, 196, 94)";
-      windowBackground.style.background = "url('images/backgroundGreen2.jpg') center/cover no-repeat";
+      windowBackground.style.background = `url('${greenBackground.src}') center/cover no-repeat`;
       txtTimerName.innerHTML = "Long Break";
       txtTime.innerHTML = (`${longBreakTimer.minutes}:00`);
       btnContinue.onclick = function() {
@@ -24,7 +32,7 @@ window.onload = function() {
       // RUN SHORT BREAK
       console.log("Short Break");
       background.style.background = "rgba(100, 200, 255)";
-      windowBackground.style.background = "url('images/backgroundBlue.jpg') center/cover no-repeat";
+      windowBackground.style.background = `url('${blueBackground.src}') center/cover no-repeat`;
       txtTimerName.innerHTML = "Short Break";
       txtTime.innerHTML = (`0${shortBreakTimer.minutes}:00`);
       btnContinue.onclick = function() {
@@ -35,7 +43,7 @@ window.onload = function() {
       // RUN STUDY
       console.log("Study");
       background.style.background = "rgba(255, 75, 40)";
-      windowBackground.style.background = "url('images/backgroundRed.jpg') center/cover no-repeat";
+      windowBackground.style.background = `url('${redBackground.src}') center/cover no-repeat`;
       txtTimerName.innerHTML = "Study";
       txtTime.innerHTML = (`${studyTimer.minutes}:00`);
       btnContinue.onclick = function() {
@@ -80,7 +88,7 @@ window.onload = function() {
           runNextTimer(lap);
           clearTimeout(x);
         }
-      }, 0);
+      }, 1000);
     }
   }
 
