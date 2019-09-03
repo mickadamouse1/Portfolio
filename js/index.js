@@ -30,6 +30,14 @@ window.onload = function() {
     }, 0);
 
 
+    btnHome.style.display = "none";
+    btnAbout.style.display = "none";
+    btnSkills.style.display = "none";
+    btnProjects.style.display = "none";
+    btnContact.style.display = "none";
+    btnAccount.style.display = "none";
+    btnBlog.style.display = "none";
+
     // *CLASS SELECTION FUNCTION* Change display value by inputting the parameters (element, value)
     function setClassVisability(element, value) {
       for (var i = 0; i < element.length; i++){

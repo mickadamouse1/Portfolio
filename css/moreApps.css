@@ -170,19 +170,19 @@ input, label {
 }
 
 .appImage1 {
-  background: url("../images/projects/magic8Cube.jpg");
+  background: url("../images/projects/magic8Cube.jpg"); /* MAGIC 8 CUBE */
   background-position: center;
   background-size: 100% auto;
 }
 
 .appImage2 {
-  background: url("../images/projects/wordCounter.jpg");
+  background: url("../images/projects/clock.jpg"); /* UNIQUE WORD COUNTER */
   background-position: center;
   background-size: 100% auto;
 }
 
 .appImage3 {
-  background: url("../images/projects/placeHolder.jpg");
+  background: url("../images/projects/characterSelect.png"); /* CHARACTER SELECT SCREEN */
   background-position: center;
   background-size: 100% auto;
 }

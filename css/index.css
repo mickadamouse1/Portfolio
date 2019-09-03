@@ -295,7 +295,7 @@ input, label {
   font-size: 27px;
   color: whitesmoke;
   position: absolute;
-  top: 10%;
+  top: 7%;
   left: 23%;
   text-align: center;
   width: 169px;
@@ -419,13 +419,13 @@ input, label {
 }
 
 .appImage3 {
-  background: url("../images/projects/CoverArt.png");
+  background: url("../images/projects/pomodoro.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .appImage4 {
-  background: url("../images/projects/clockIcon.jpg");
+  background: url("../images/projects/wordCounter.jpg");
   background-position: center;
   background-size: cover;
 }
