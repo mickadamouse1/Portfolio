@@ -279,6 +279,10 @@ input, label {
   text-align: justify;
 }
 
+#aboutMeSection #txtGitHub {
+  font-size: 1rem;
+}
+
 #aboutPug {
   position: absolute;
   bottom: 0;
@@ -336,6 +340,7 @@ input, label {
   width: 28%;
   display: inline-table;
   font-family: sans-serif;
+  text-align: justify;
 }
 
 .skill h5 {
@@ -629,6 +634,17 @@ input, label {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1600px) {
+  #aboutPug img {
+    width: 17rem;
+  }
+
+  #aboutPug h4 {
+    font-size: 24px;
+    left: 20%;
+  }
 }
 
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */
