@@ -329,7 +329,7 @@ input, label {
 }
 
 #skills {
-  margin: 20px 0 0 0px;
+  margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -337,14 +337,16 @@ input, label {
 
 .skill {
   margin: 0 0;
-  width: 28%;
+  width: 44%;
   display: inline-table;
   font-family: sans-serif;
   text-align: justify;
+  font-size: 1.2rem;
 }
 
 .skill h5 {
   font-family: "EB Garamond";
+  font-size: 2rem;
 }
 
 #skillCharts {

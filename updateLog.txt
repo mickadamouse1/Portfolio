@@ -58,3 +58,4 @@ PORTFOLIO UPDATE LOG - by date - Michael Chambers
 -----------------------------------------------------------------------------------------------------------
 12/09/2019 -- Portfolio: Added text to about me, updated skills section text and added responsitivity to about pug.
 -----------------------------------------------------------------------------------------------------------
+13/09/2019 -- Portfolio: Updated skills page design (removed skill charts). Further updates to be made to this section.
