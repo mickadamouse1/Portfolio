@@ -202,11 +202,11 @@ input, label {
 
 #landingPage button {
   position: absolute;
-  bottom: 2%;
+  bottom: 3%;
   right: 0;
   left: 0;
-  width: 150px;
-  height: 50px;
+  width: 13rem;
+  height: 4rem;
   opacity: 0.7;
   z-index: 2;
   background: #333;
@@ -329,34 +329,49 @@ input, label {
 }
 
 #skills {
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .skill {
-  margin: 0 0;
-  width: 44%;
-  display: inline-table;
+  margin: 2rem 0;
+  width: 42%;
+  height: 19rem;
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: sans-serif;
-  text-align: justify;
-  font-size: 1.2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  background: #f4f4f4;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
 
 .skill h5 {
   font-family: "EB Garamond";
   font-size: 2rem;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  padding: 0.2rem 1rem;
+  box-shadow: 0 0 2px;
+  position: relative;
+  top: -3rem;
+  background: #f4f4f4;
 }
 
-#skillCharts {
-  display: flex;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+.skill p {
+  position: relative;
+  top: -2rem;
 }
 
-#skillCharts img {
-  width: 50%;
-  height: 50%;
+#txtCssJoke {
+  font-size: 0.6rem;
+  top: -2.5rem;
+  color: grey;
 }
 
 /* PROJECTS */
@@ -404,7 +419,7 @@ input, label {
 }
 
 .appImage1, .appImage2, .appImage3, .appImage4, .appImage5, .appImage6 {
-  box-shadow: 0 0px 2px;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5);
   opacity: 1;
   display: block;
   width: 100%;
@@ -655,6 +670,8 @@ input, label {
 
 @media (max-width: 1200px) {
 
+  /* Landing page */
+
   #michaelJap, #chambersJap {
     font-size: 7rem;
     font-weight: 300;
@@ -667,6 +684,8 @@ input, label {
     line-height: 6rem;
   }
 
+  /* About me page */
+
   #aboutMeContent {
     padding: 0 56px;
   }
@@ -675,9 +694,23 @@ input, label {
     width: 56%;
   }
 
+  /* Skills page */
+
   #skillsSection h1 {
     padding-left: 1.3rem;
   }
+
+  .skill {
+    width: 45%;
+    height: 16rem;
+    font-size: 1.2rem;
+  }
+
+  .skill p {
+    top: -2.5rem;
+  }
+
+  /* Contact page */
 
   #contactForm {
     width: 65%;
@@ -693,6 +726,8 @@ input, label {
 /* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
 
 @media (max-width: 990px){
+
+  /* Navigation Bar */
 
   #nav.dropdownStyle {
     background: #292929;
@@ -758,8 +793,10 @@ input, label {
     opacity: 1;
   }
 
+  /* About Me Page */
+
   #aboutMeSection {
-    height: 1080px;
+    height: 74rem;
   }
 
   #aboutMeContent {
@@ -772,24 +809,27 @@ input, label {
 
   #aboutMeHeader {
     text-align: center;
-    font-size: 6.7rem;
+    font-size: 7rem;
+    width: 37rem;
   }
 
   #aboutMePortrait {
-    width: 32rem;
-    float: none;
+    width: 36rem;
+    height: 40rem;
   }
 
   #aboutMeSection p {
-    width: 92%;
+    width: 38rem;
   }
 
   #aboutPug {
     display: none;
   }
 
+  /* Skills Page*/
+
   #skillsSection {
-    height: 1100px;
+    height: 59rem;
   }
 
   #skillsSection h1 {
@@ -797,11 +837,13 @@ input, label {
     text-align: center;
   }
 
+  #skills {
+    margin-top: 1rem;
+  }
+
   .skill {
-    width: 45%;
-    margin: 0 15px;
-    font-size: 1.2rem;
-    text-align: center;
+    height: 21rem;
+    margin: 1.3rem 0;
   }
 
   .skill h5 {
@@ -811,6 +853,9 @@ input, label {
   #skillsGrid {
     margin-bottom: 20px;
   }
+
+
+  /* Projects Page */
 
   #projectsSection {
     height: 1300px;
@@ -830,6 +875,8 @@ input, label {
     width: 45%;
   }
 
+  /* Contact Me Page */
+
   #contactSection h1, #contactSection p {
     width: 75%;
   }
@@ -844,6 +891,9 @@ input, label {
 /* XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL XSMALL*/
 
 @media (max-width: 769px){
+
+  /* Landing Page */
+
   #michaelJap, #chambersJap {
     font-size: 5rem;
     line-height: 4rem;
@@ -854,15 +904,24 @@ input, label {
     line-height: 5rem;
   }
 
+  #landingPage button {
+    bottom: 4%;
+    width: 15rem;
+    height: 4rem;
+  }
+
+  /* About Me Page */
+
   #aboutMeSection {
-    height: 1100px;
+    height: 67rem;
   }
 
   #aboutMePortrait {
+    width: 30rem;
+    height: 30rem;
   }
 
   #aboutMeHeader {
-    width: 32rem;
     font-size: 6rem;
   }
 
@@ -870,8 +929,10 @@ input, label {
     width: 30rem;
   }
 
+  /* Skills page */
+
   #skillsSection {
-    height: 2100px;
+    height: 106rem;
   }
 
   #skillsSection h1 {
@@ -880,9 +941,8 @@ input, label {
   }
 
   .skill {
-    width: 100%;
-    margin: 10px 15px;
-    text-align: center;
+    width: 72%;
+    margin: 1.5rem 0;
     font-size: 1.3rem;
   }
 
@@ -890,14 +950,7 @@ input, label {
     font-size: 2rem;
   }
 
-  #skillCharts {
-    display: inline-block;
-  }
-
-  #skillCharts img {
-    width: 100%;
-    height: 100%;
-  }
+  /* Projects Page */
 
   #projectsSection {
     height: 2900px;
@@ -906,6 +959,12 @@ input, label {
   .app {
     width: 75%;
     height: 400px;
+  }
+
+  /* Contact Me Page */
+
+  #contactSection h1 {
+    padding: 10rem 0 1rem 0;
   }
 
   #contactForm label {
