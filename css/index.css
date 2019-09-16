@@ -252,6 +252,10 @@ input, label {
   font-size: 6rem;
   text-align: center;
   float: left;
+  border-bottom: 1px solid;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  height: 6.7rem;
+  margin-bottom: 1rem;
 }
 
 #aboutMeContent {
@@ -273,10 +277,11 @@ input, label {
 }
 
 #aboutMeSection p {
-  font-size: 20px;
+  font-size: 1.2rem;
   width: 50%;
   float: left;
   text-align: justify;
+  font-family: sans-serif;
 }
 
 #aboutMeSection #txtGitHub {
@@ -322,10 +327,14 @@ input, label {
 }
 
 #skillsSection h1 {
-  font-family: "eb garamond";
-  padding-left: 1.7rem;
+  width: 20rem;
+  margin: 0 auto 1rem;
+  text-align: center;
+  font-family: "EB Garamond";
   color: #333;
   font-size: 5rem;
+  border-bottom: 1px solid;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
 
 #skills {
@@ -348,7 +357,7 @@ input, label {
   font-size: 1.4rem;
   border: solid 1px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
-  background: #f4f4f4;
+  background: #f6f6f6;
   box-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
 
@@ -398,12 +407,14 @@ input, label {
 }
 
 #projectsHeader {
-  margin: 0 0 10px;
-  padding-left: 3rem;
-  text-align: left;
+  width: 30rem;
+  margin: 0 auto 1rem;
+  text-align: center;
   font-family: "EB Garamond";
   color: #333;
   font-size: 5rem;
+  border-bottom: 1px solid;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
 
 #apps {
