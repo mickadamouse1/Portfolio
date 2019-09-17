@@ -115,26 +115,40 @@ input, label {
   background: #f4f4f4;
 }
 
-/* PROJECTS */
-/* PROJECTS */
-/* PROJECTS */
+/* APPS SECTION */
+/* APPS SECTION */
+/* APPS SECTION */
 
 #projectsSection {
   height: 969px;
   min-height: 100vh;
-  padding: 100px 0 20px 0;
+  padding-top: 4.5rem;
   background: white;
   position: relative;
 }
 
-#projectsHeader {
-  margin: 0 0 10px;
-  padding-left: 3rem;
-  text-align: left;
+#pageHeader, h5 {
+  margin: 0 auto;
+  text-align: center;
   font-family: "EB Garamond";
   color: #333;
+  font-weight: 300;
+}
+
+#pageHeader {
+  font-size: 7rem;
+  width: 40rem;
+  border-bottom: solid 1px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+h5 {
   font-size: 5rem;
 }
+
+/* APPS */
+/* APPS */
+/* APPS */
 
 #apps {
   text-align: center;
@@ -148,97 +162,65 @@ input, label {
   margin: 15px 15px;
 }
 
-.appImage1,
-.appImage2,
-.appImage3,
-.appImage4,
-.appImage5,
-.appImage6,
-.appImage7,
-.appImage8,
-.appImage9,
-.appImage10,
-.appImage11,
-.appImage12 {
+.appImg {
   box-shadow: 0 0px 2px;
   opacity: 1;
   display: block;
   width: 100%;
   height: 100%;
-  transition: .5s ease;
+  transition: 0.2s ease;
   backface-visibility: hidden;
+  background-position: center !important;
+  background-size: cover !important;
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage1 {
-  background: url("../images/projects/magic8Cube.jpg"); /* MAGIC 8 CUBE */
-  background-position: center;
-  background-size: 100% auto;
+#appImgPomodoro {
+  background: url("../images/projects/pomodoroThumbnail.jpg"); /* MAGIC 8 CUBE */
 }
 
-.appImage2 {
-  background: url("../images/projects/clock.jpg"); /* UNIQUE WORD COUNTER */
-  background-position: center;
-  background-size: 100% auto;
+#appImgDigitalClock {
+  background: url("../images/projects/simpleClockThumbnail.jpg"); /* UNIQUE WORD COUNTER */
 }
 
-.appImage3 {
-  background: url("../images/projects/characterSelect.png"); /* CHARACTER SELECT SCREEN */
-  background-position: center;
-  background-size: 100% auto;
+#appImgWordCounter {
+  background: url("../images/projects/wordCounterThumbnail.jpg"); /* CHARACTER SELECT SCREEN */
 }
 
-.appImage4 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgCalculator {
+  background: url("../images/projects/simpleCalculatorThumbnail.jpg");
 }
 
-.appImage5 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage6 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage7 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage8 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage9 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage10 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage11 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
-.appImage12 {
-  background: url("../images/projects/placeHolder.jpg");
-  background-position: center;
-  background-size: 100% auto;
+#appImgS {
+  background: url("../images/projects/placeHolderThumbnail.jpg");
 }
 
 .appName {
@@ -251,19 +233,9 @@ input, label {
   -ms-transform: translate(-50%, -50%);
 }
 
-.app:hover .appImage1,
-.app:hover .appImage2,
-.app:hover .appImage3,
-.app:hover .appImage4,
-.app:hover .appImage5,
-.app:hover .appImage6,
-.app:hover .appImage7,
-.app:hover .appImage8,
-.app:hover .appImage9,
-.app:hover .appImage10,
-.app:hover .appImage11,
-.app:hover .appImage12 {
+.app:hover .appImg {
   opacity: 0.6;
+  box-shadow: 0 0 10px 1px;
 }
 
 .app:hover .appName {
@@ -291,13 +263,6 @@ input, label {
 
 .appName a:hover {
   background-color: #084C61;
-}
-
-#projectsArrow img {
-  width: 5rem;
-  opacity: 0.5;
-  margin: 0 auto;
-  display: block;
 }
 
 /* LARGE LARGE LARGE LARGE LARGE LARGE LARGE */

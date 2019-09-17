@@ -92,6 +92,7 @@ input, label {
   width: 100%;
   background: #FFFFFF;
   position: fixed;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   z-index: 1030;
   opacity: 0;
   transition: opacity 1s;
@@ -168,7 +169,7 @@ input, label {
   overflow: hidden;
   opacity: 1;
   transition: opacity 0.3s;
-  background: url("../images/landing page/bg8.jpg");
+  background: url("../images/landing page/landingBackground.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -216,6 +217,7 @@ input, label {
   font-size: 25px;
   display: flex;
   justify-content: center;
+  align-items: center;
   box-shadow: 0 1px 2px rgba(0,0,0,0.5);
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   outline: none;
@@ -440,7 +442,7 @@ input, label {
 }
 
 .appImage1 {
-  background: url("../images/projects/battleshipsIcon.jpg");
+  background: url("../images/projects/battleshipsThumbnail.png");
   background-position: center;
   background-size: cover;
 }
@@ -822,6 +824,7 @@ input, label {
     text-align: center;
     font-size: 7rem;
     width: 37rem;
+    height: 7.7rem;
   }
 
   #aboutMePortrait {
@@ -933,7 +936,9 @@ input, label {
   }
 
   #aboutMeHeader {
-    font-size: 6rem;
+    font-size: 5.7rem;
+    width: 30rem;
+    height: 6.5rem;
   }
 
   #aboutMeSection p {
