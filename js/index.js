@@ -1,11 +1,18 @@
 window.onload = function() {
+
+  // Ex
+
   var isChrome = (navigator.userAgent.toString().toLowerCase().indexOf("chrome") != -1);  // I dont have a clue how this actually works...
   var isFirefox = (navigator.userAgent.toString().toLowerCase().indexOf("firefox") != -1); // Its been two days... I still dont have a clue...
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   var landingPage = document.getElementById("landingPage");
   var aboutMeSection = document.getElementById("aboutMeSection");
   var skillsSection = document.getElementById("skillsSection");
   var projectsSection = document.getElementById("projectsSection");
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   var btnHome = document.getElementById("btnHome");
   var btnAbout = document.getElementById("btnAbout");
@@ -15,6 +22,9 @@ window.onload = function() {
   var btnAccount = document.getElementById("navAccountIconLink");
   var btnBlog = document.getElementById("navBlogIconLink");
   var btnStart = document.getElementById("btnGetStarted");
+  var btnDropdown = document.getElementById("hamburger");
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   var navLinks = document.getElementsByClassName("navLink");
   var navLinkList = document.getElementById("navLinkList");
@@ -25,47 +35,69 @@ window.onload = function() {
   var timeout = true;
   var dropDownStatus = false;
 
-    setTimeout(function(){
-      window.scrollTo(0,0);
-    }, 0);
+  var hamburgerIcon = document.getElementById("hamburgerIcon");
 
+  ////////////////////////////////////////////////////////////////////////////////
 
-    btnHome.style.display = "none";
-    btnAbout.style.display = "none";
-    btnSkills.style.display = "none";
-    btnProjects.style.display = "none";
-    btnContact.style.display = "none";
-    btnAccount.style.display = "none";
-    btnBlog.style.display = "none";
+  setTimeout(function(){
+    window.scrollTo(0,0);
+  }, 0);
 
-    // *CLASS SELECTION FUNCTION* Change display value by inputting the parameters (element, value)
-    function setClassVisability(element, value) {
-      for (var i = 0; i < element.length; i++){
-        element[i].style.display = value;
-      };
-    }
+  ////////////////////////////////////////////////////////////////////////////////
+
+  btnHome.style.display = "none";
+  btnAbout.style.display = "none";
+  btnSkills.style.display = "none";
+  btnProjects.style.display = "none";
+  btnContact.style.display = "none";
+  btnAccount.style.display = "none";
+  btnBlog.style.display = "none";
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+  // *CLASS SELECTION FUNCTION* Change display value by inputting the parameters (element, value)
+
+  function setClassVisability(element, value) {
+    for (var i = 0; i < element.length; i++){
+      element[i].style.display = value;
+    };
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   // *ID SELECTION FUNCTION* Change display value by inputting the parameters (element, value)
   function setIdVisability(variableName, value) {
     variableName.style.display = value;
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
+
   // *ID CLASS SELECTION FUNCTION* Change display value of all classes within an ID by using parameters (element, value)
   function setAllClassWithinIdVisability(variableName, value){
-    for (i = 0; i < variableName.length; i++) {                         // Loops through to select all elements within this ID
+
+    // Loops through to select all elements within this ID
+    for (i = 0; i < variableName.length; i++) {
       variableName[i].style.display = value;
     };
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
+
   function showDropdown() {
     setClassVisability(navLinks, "block");
-    setAllClassWithinIdVisability(navIcons, "inline-block");                 // set the navigation link visability to block using the class selection function (see above)
+
+    // set the navigation link visability to block using the class selection function (see above)
+    setAllClassWithinIdVisability(navIcons, "inline-block");
     setIdVisability(navLinkList, "block");
     navLinkVisability = true;
     dropDownStatus = true;
     nav.classList.toggle("dropdownStyle");
     brand.classList.toggle("dropdownStyle");
+    btnDropdown.classList.toggle("dropdownStyle");
+    hamburgerIcon.style.background = "#292929";
   }
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   function hideDropdown(){
     setClassVisability(navLinks, "none");
@@ -75,7 +107,11 @@ window.onload = function() {
     dropDownStatus = false;
     nav.classList.toggle("dropdownStyle");
     brand.classList.toggle("dropdownStyle");
+    btnDropdown.classList.toggle("dropdownStyle");
+    hamburgerIcon.style.background = "white";
   }
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   function scrollToSection(section) {
     section.scrollIntoView(true);
@@ -84,13 +120,7 @@ window.onload = function() {
     }
   }
 
-  hamburgerIcon.onclick = function(){
-    if (dropDownStatus == false){
-      showDropdown();
-    } else {
-      hideDropdown();
-    }
-  }
+  ////////////////////////////////////////////////////////////////////////////////
 
   window.addEventListener('resize', function() {
     viewportWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -117,6 +147,8 @@ window.onload = function() {
     }
   }, false);
 
+  ////////////////////////////////////////////////////////////////////////////////
+
   btnStart.onclick = function() {
     document.body.style.overflow = "visible";
     aboutMeSection.classList.toggle("fade");
@@ -134,6 +166,8 @@ window.onload = function() {
     btnAccount.style.display = "inline-flex";
     btnBlog.style.display = "inline-flex";
   }
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   btnHome.onclick = function() {
     // hides home page overflow to prevent scrolling
@@ -161,12 +195,45 @@ window.onload = function() {
     btnBlog.style.display = "none";
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
+
+  btnDropdown.onclick = function(){
+    if (dropDownStatus == false){
+      showDropdown();
+    } else {
+      hideDropdown();
+    }
+  }
+
+  btnDropdown.onmouseover = function() {
+    if (dropDownStatus) {
+      hamburgerIcon.style.background = "red";
+    } else {
+      hamburgerIcon.style.background = "#ccc";
+    }
+  }
+
+  btnDropdown.onmouseout = function() {
+    if (dropDownStatus) {
+      hamburgerIcon.style.background = "#292929";
+    } else {
+      hamburgerIcon.style.background = "white";
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   btnAbout.onclick = function(){scrollToSection(aboutMeSection)}
   btnSkills.onclick = function(){scrollToSection(skillsSection)}
   btnProjects.onclick = function(){scrollToSection(projectsSection)}
   btnContact.onclick = function(){scrollToSection(contactSection)}
-}
+
+} // WINDOW.ONLOAD ENDS HERE
+
+////////////////////////////////////////////////////////////////////////////////
+
+// When the user leaves the page, scroll back to top.
+// This means returning back to the page will return to top.
 
 window.onbeforeunload = function() {
   window.scrollTo(0,0);

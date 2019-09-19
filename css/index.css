@@ -82,7 +82,6 @@ input, label {
 
 #navFlexContainer {
   display: flex;
-  width: 100%;
   justify-content: space-evenly;
   align-items: center;
   height: 60px;
@@ -103,12 +102,9 @@ input, label {
 }
 
 #brand {
-  color: #262730;
   font-family: "EB Garamond";
   font-size: 25px;
-  font-weight: 500;
   margin: 0;
-  display: inline-flex;
 }
 
 #navLinkList {
@@ -132,7 +128,6 @@ input, label {
 }
 
 .navLink {
-  text-decoration: none;
   color: #262730;
   font-size: 1.4rem;
   padding: 0 10px;
@@ -143,18 +138,14 @@ input, label {
   color: black;
 }
 
-.icon {
+#hamburger {
   display: none;
-  padding: 3px;
+  padding: 3px 5px;
 }
 
-#hamburgerIcon i {
+#hamburgerIcon {
   padding: 3px;
   border-radius: 20%;
-}
-
-#hamburgerIcon i:hover {
-  background: #f4f4f4;
 }
 
 /* LANDING PAGE */
@@ -431,50 +422,40 @@ input, label {
   margin: 15px 15px;
 }
 
-.appImage1, .appImage2, .appImage3, .appImage4, .appImage5, .appImage6 {
-  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5);
+.appImg {
+  box-shadow: 0 0 2px;
   opacity: 1;
   display: block;
   width: 100%;
   height: 100%;
-  transition: .5s ease;
+  transition: .2s ease;
   backface-visibility: hidden;
+  background-position: center !important;
+  background-size: cover !important;
 }
 
-.appImage1 {
+#appImgBattleships {
   background: url("../images/projects/battleshipsThumbnail.png");
-  background-position: center;
-  background-size: cover;
 }
 
-.appImage2 {
+#appImgCalculator {
   background: url("../images/projects/calculatorIcon.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
-.appImage3 {
+#appImgPomodoro {
   background: url("../images/projects/pomodoro.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
-.appImage4 {
+#appImgWordCounter {
   background: url("../images/projects/wordCounter.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
-.appImage5 {
+#appImgBouncyBalls {
   background: url("../images/projects/bouncyballsIcon.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
-.appImage6 {
+#appImgMoreApps {
   background: url("../images/projects/moreAppsIcon.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .appName {
@@ -487,13 +468,9 @@ input, label {
   -ms-transform: translate(-50%, -50%);
 }
 
-.app:hover .appImage1,
-.app:hover .appImage2,
-.app:hover .appImage3,
-.app:hover .appImage4,
-.app:hover .appImage5,
-.app:hover .appImage6 {
+.app:hover .appImg {
   opacity: 0.6;
+  box-shadow: 0 0 10px 1px;
 }
 
 .app:hover .appName {
@@ -746,7 +723,7 @@ input, label {
     background: #292929;
   }
 
-  #brand.dropdownStyle {
+  #brand.dropdownStyle, #hamburger.dropdownStyle {
     color: wheat;
   }
 
@@ -776,12 +753,12 @@ input, label {
     color: crimson;
   }
 
-  #navFlexContainer a.icon {
+  #hamburger {
     float: right;
     display: block;
     font-size: 25px;
     color: red;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   #navLinkList {
@@ -804,6 +781,12 @@ input, label {
     color: wheat;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     opacity: 1;
+  }
+
+  /* Landing Page */
+
+  #landingPage {
+    height: 110vh;
   }
 
   /* About Me Page */
