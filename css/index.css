@@ -630,18 +630,66 @@ input, label {
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 
 #footer {
+  position: relative;
   height: 500px;
   background: #333;
   border-top: dashed 5px #222;
   color: #f4f4f4;
 }
 
-#footer h4 {
-  height: 98%;
+#socialMediaList {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 18rem;
+  margin: 3rem auto;
+  font-size: 4rem;
+  padding: 0;
 }
+
+#socialMediaList a {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+#socialMediaList a:hover {
+  background: indianred;
+}
+
+#txtTechUsed {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+#techUsedList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 21rem;
+  margin: 1.4rem auto;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+#txtCopywrite {
+  text-align: center;
+  font-style: italic;
+  color: grey;
+  position: relative;
+  bottom: -5rem;
+}
+
+/* XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE */
+/* XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE */
+/* XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE */
 
 @media (max-width: 1600px) {
   #aboutPug img {

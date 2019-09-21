@@ -65,3 +65,5 @@ PORTFOLIO UPDATE LOG - by date - Michael Chambers
 16/09/2019 -- Portfolio: Minor design updates of various elements across the website.
 -----------------------------------------------------------------------------------------------------------
 17/09/2019 -- Portfolio: Various design changes across the website.
+-----------------------------------------------------------------------------------------------------------
+21/09/2019 -- Portfolio: Updated footer content.
