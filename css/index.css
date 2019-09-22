@@ -578,7 +578,7 @@ input, label {
 #contactForm button {
   height: 50px;
   background: #99544D;
-  box-shadow: 0 0 10px 1px rgba(0,0,0, 0.2);
+  box-shadow: 0 1px 2px rgba(0,0,0);
   border: none;
   border-radius: 3px;
   text-align: center;
@@ -642,7 +642,7 @@ input, label {
   display: flex;
   justify-content: space-between;
   width: 18rem;
-  margin: 3rem auto;
+  margin: 2.3rem auto;
   font-size: 4rem;
   padding: 0;
 }
@@ -662,10 +662,10 @@ input, label {
   background: indianred;
 }
 
-#txtTechUsed {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 300;
+#footerHR {
+  width: 19rem;
+  height: 0.2rem;
+  background: #f4f4f4;
 }
 
 #techUsedList {
@@ -674,7 +674,7 @@ input, label {
   display: flex;
   justify-content: space-between;
   width: 21rem;
-  margin: 1.4rem auto;
+  margin: 3rem auto;
   font-weight: 300;
   font-size: 1.3rem;
 }
@@ -684,7 +684,11 @@ input, label {
   font-style: italic;
   color: grey;
   position: relative;
-  bottom: -5rem;
+  bottom: -4rem;
+}
+
+#pugliepugLink {
+  color: violet;
 }
 
 /* XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE */
