@@ -221,8 +221,6 @@ input, label {
 #aboutMeSection {
   height: 970px;
   position: relative;
-  background-size: cover;
-  background-position: 275px -100px;
   opacity: 0;
   transition: opacity 1s;
 }
@@ -243,10 +241,8 @@ input, label {
   font-family: "EB Garamond";
   color: #333;
   font-size: 6rem;
-  text-align: center;
   float: left;
-  border-bottom: 1px solid;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  border-bottom: 2px solid grey;
   height: 6.7rem;
   margin-bottom: 1rem;
 }
@@ -257,7 +253,6 @@ input, label {
 }
 
 #aboutMePortrait {
-  display: block;
   background: url("../images/about/pic.jpg");
   background-position: center;
   background-size: cover;
@@ -285,7 +280,6 @@ input, label {
   position: absolute;
   bottom: 0;
   left: 3%;
-  z-index: -1;
   opacity: 0.7;
 }
 
@@ -308,7 +302,7 @@ input, label {
 /* SKILLS */
 
 #skillsSection {
-  height: 880px;
+  height: 54rem;
 }
 
 #skillsSectionBackground {
@@ -326,12 +320,10 @@ input, label {
   font-family: "EB Garamond";
   color: #333;
   font-size: 5rem;
-  border-bottom: 1px solid;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  border-bottom: 2px solid grey;
 }
 
 #skills {
-  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -406,8 +398,7 @@ input, label {
   font-family: "EB Garamond";
   color: #333;
   font-size: 5rem;
-  border-bottom: 1px solid;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  border-bottom: 2px solid grey;
 }
 
 #apps {
@@ -578,7 +569,7 @@ input, label {
 #contactForm button {
   height: 50px;
   background: #99544D;
-  box-shadow: 0 0 10px 1px rgba(0,0,0, 0.2);
+  box-shadow: 0 1px 2px rgba(0,0,0);
   border: none;
   border-radius: 3px;
   text-align: center;
@@ -642,7 +633,7 @@ input, label {
   display: flex;
   justify-content: space-between;
   width: 18rem;
-  margin: 3rem auto;
+  margin: 2.3rem auto;
   font-size: 4rem;
   padding: 0;
 }
@@ -662,10 +653,10 @@ input, label {
   background: indianred;
 }
 
-#txtTechUsed {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 300;
+#footerHR {
+  width: 19rem;
+  height: 0.2rem;
+  background: #f4f4f4;
 }
 
 #techUsedList {
@@ -674,7 +665,7 @@ input, label {
   display: flex;
   justify-content: space-between;
   width: 21rem;
-  margin: 1.4rem auto;
+  margin: 3rem auto;
   font-weight: 300;
   font-size: 1.3rem;
 }
@@ -684,7 +675,11 @@ input, label {
   font-style: italic;
   color: grey;
   position: relative;
-  bottom: -5rem;
+  bottom: -4rem;
+}
+
+#pugliepugLink {
+  color: violet;
 }
 
 /* XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE XLARGE */
