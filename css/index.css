@@ -374,7 +374,6 @@ input, label {
 
 #projectsSection {
   height: 969px;
-  /* min-height: 100vh; */
   padding: 0 0 20px 0;
   position: relative;
 }
@@ -391,6 +390,13 @@ input, label {
   z-index: -1;
 }
 
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #projectsHeader {
   width: 30rem;
   margin: 0 auto 1rem;
@@ -402,21 +408,22 @@ input, label {
 }
 
 #apps {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2.2rem 0 0 0;
+  width: 64rem;
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .app {
-  display: inline-block;
-  position: static;
-  width: 29%;
-  height: 300px;
-  margin: 15px 15px;
+  position: relative;
+  width: 33.3%;
+  height: 20rem;
 }
 
 .appImg {
-  box-shadow: 0 0 2px;
   opacity: 1;
-  display: block;
   width: 100%;
   height: 100%;
   transition: .2s ease;
@@ -449,48 +456,26 @@ input, label {
   background: url("../images/projects/moreAppsIcon.jpg");
 }
 
-.appName {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 42.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+/* Projects Animation Classes */
+
+.app-large {
+  display: inline-block;
+  position: static;
+  width: 50rem;
+  height: 23rem;
+  margin: 15px 15px;
+  background: white;
+  box-shadow: -2px 2px 2px rgba(0,0,0,0.5);
 }
 
-.app:hover .appImg {
-  opacity: 0.6;
-  box-shadow: 0 0 10px 1px;
-}
-
-.app:hover .appName {
-  opacity: 1;
-}
-
-.appName {
+.appImg-small {
+  border-radius: 2rem;
+  width: 20rem;
+  height: 20rem;
   position: relative;
-  top: -50%;
-  left: 50%;
-  margin: 0 auto;
+  top: 1.5rem;
+  left: 1.5rem;
 }
-
-.appName a {
-  background-color: #323031;
-  color: white;
-  font-size: 1.2rem;
-  font-family: "EB Garamond";
-  font-weight: 700;
-  padding: 16px 32px;
-  margin: auto 0;
-  text-align: center;
-  text-decoration: none;
-}
-
-.appName a:hover {
-  background-color: #084C61;
-}
-
 
 /* CONTACT */
 /* CONTACT */
