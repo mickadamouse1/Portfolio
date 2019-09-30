@@ -124,7 +124,7 @@ window.onload = function() {
 
   window.addEventListener('resize', function() {
     viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-    if (viewportWidth >= 990 && timeout == true) {
+    if (viewportWidth > 991 && timeout == true) {
       setClassVisability(navLinks, "block");
       setClassVisability(navIcons, "block");
       setIdVisability(navLinkList, "inline-flex");
@@ -133,7 +133,7 @@ window.onload = function() {
       setTimeout(function(){
         timeout = true;
       }, 0);
-    } else if (viewportWidth < 990 && timeout == true && dropDownStatus == false) {
+    } else if (viewportWidth <= 991 && timeout == true && dropDownStatus == false) {
       setClassVisability(navIcons, "none");
       setIdVisability(navLinkList, "none");
       navLinkVisability = false;
@@ -141,7 +141,7 @@ window.onload = function() {
       setTimeout(function(){
         timeout = true;
       }, 0);
-    } else if (viewportWidth < 990 && timeout == true && dropDownStatus == true) {
+    } else if (viewportWidth < 991 && timeout == true && dropDownStatus == true) {
       setClassVisability(navIcons, "inline-block");
       setIdVisability(navLinkList, "block");
     }
@@ -158,7 +158,7 @@ window.onload = function() {
     setTimeout(function(){
       landingPage.style.display = "none";
     }, 200);
-    if (viewportWidth >= 990) {
+    if (viewportWidth > 991) {
       setClassVisability(navLinks, "block");
       setClassVisability(navIcons, "block");
       setIdVisability(navLinkList, "inline-flex");
@@ -174,8 +174,12 @@ window.onload = function() {
     document.body.style.overflow = "hidden";
     // immediately scrolls back to the very top of the page (aka. home page)
     window.scrollTo(0,0);
+    // scrolls back to the top, if the user manages to bypass overflow on "home-load"
+    setTimeout(function(){
+      window.scrollTo(0,0);
+    }, 500)
     // if mobile screen size, hide the dropdown
-    if (viewportWidth <= 990) {
+    if (viewportWidth < 990) {
       hideDropdown();
     }
     landingPage.style.display = "flex";

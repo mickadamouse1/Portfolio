@@ -379,7 +379,7 @@ input, label {
 }
 
 #projectsSectionBackground {
-  background: url("../images/projects/projectsPug2.png");
+  background: url("../images/projects/design/bkgdProjects.png");
   width: 100%;
   height: 100%;
   display: block;
@@ -409,54 +409,128 @@ input, label {
 
 #apps {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 2.2rem 0 0 0;
-  width: 64rem;
-  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .app {
   position: relative;
-  width: 33.3%;
-  height: 20rem;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 3rem;
+  margin: 0.5rem;
+  box-shadow: -2px 2px 3px rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.95;
+  transition: .5s ease;
 }
 
 .appImg {
   opacity: 1;
-  width: 100%;
-  height: 100%;
-  transition: .2s ease;
+  width: 90%;
+  height: 90%;
   backface-visibility: hidden;
   background-position: center !important;
   background-size: cover !important;
+  border-radius: 3rem;
+  transition: .2s ease;
 }
 
+.appNameContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appName {
+  background: firebrick;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .5s ease;
+}
+
+/* Projects Design Specifics */
+
+/* Bkgd Images */
 #appImgBattleships {
-  background: url("../images/projects/battleshipsThumbnail.png");
+  background: url("../images/projects/games/appAdvBattleships.png");
 }
 
 #appImgCalculator {
-  background: url("../images/projects/calculatorIcon.jpg");
+  background: url("../images/projects/tools/appSimpleCalculator.jpg");
 }
 
 #appImgPomodoro {
-  background: url("../images/projects/pomodoro.jpg");
+  background: url("../images/projects/tools/appPomodoro.png");
 }
 
 #appImgWordCounter {
-  background: url("../images/projects/wordCounter.jpg");
+  background: url("../images/projects/tools/appWordCounter.jpg");
 }
 
 #appImgBouncyBalls {
-  background: url("../images/projects/bouncyballsIcon.jpg");
+  background: url("../images/projects/games/appBouncyBalls.jpg");
 }
 
 #appImgMoreApps {
-  background: url("../images/projects/moreAppsIcon.jpg");
+  background: url("../images/projects/design/moreApps.jpg");
+}
+
+/* specific app thumbnail designs */
+
+#appAdvBattleships {
+  background: #333;
+}
+
+#appSimpleCalculator {
+  background: #EB7E45;
+}
+
+#appPomodoro {
+  background: #68bfc8;
+}
+
+#appWordCounter {
+  background: #E5D59A;
+}
+
+#appBouncyBalls {
+  background: #151515;
+}
+
+#moreApps {
+  background: #7FAEF2;
 }
 
 /* Projects Animation Classes */
+
+.app:hover .appImg {
+  opacity: 0.6;
+}
+
+.app:hover .appName {
+  opacity: 1;
+}
+
+.app:hover {
+  box-shadow: 0 0 8px black;
+  z-index: 10;
+}
 
 .app-large {
   display: inline-block;
@@ -728,6 +802,12 @@ input, label {
     top: -2.5rem;
   }
 
+  /* Projects Section */
+
+  #apps {
+    width: 60rem;
+  }
+
   /* Contact page */
 
   #contactForm {
@@ -743,7 +823,7 @@ input, label {
 /* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
 /* SMALL SMALL SMALL SMALL SMALL SMALL SMALL*/
 
-@media (max-width: 990px){
+@media (max-width: 991px){
 
   /* Navigation Bar */
 
@@ -892,10 +972,6 @@ input, label {
     font-size: 5rem;
   }
 
-  #apps {
-    text-align: center;
-  }
-
   .app {
     width: 45%;
   }
@@ -980,12 +1056,12 @@ input, label {
   /* Projects Page */
 
   #projectsSection {
-    height: 2900px;
+    height: auto;
   }
 
   .app {
-    width: 75%;
-    height: 400px;
+    width: 15rem;
+    height: 15rem;
   }
 
   /* Contact Me Page */
