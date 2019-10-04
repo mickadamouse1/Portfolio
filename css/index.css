@@ -219,7 +219,7 @@ input, label {
 /* ABOUT ME */
 
 #aboutMeSection {
-  height: 970px;
+  height: 61rem;
   position: relative;
   opacity: 0;
   transition: opacity 1s;
@@ -257,10 +257,10 @@ input, label {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 40%;
-  height: 500px;
-  border-radius: 20px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  width: 46%;
+  height: 32rem;
+  border-radius: 3rem;
+  box-shadow: -2px 2px 2px rgba(0,0,0,0.6);
   float: right;
 }
 
@@ -302,7 +302,7 @@ input, label {
 /* SKILLS */
 
 #skillsSection {
-  height: 54rem;
+  height: 61rem;
 }
 
 #skillsSectionBackground {
@@ -327,7 +327,7 @@ input, label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 2.6rem 0 0 0;
+  margin: 1.6rem 0 0 0;
 }
 
 .skill {
@@ -384,7 +384,7 @@ input, label {
 /* PROJECTS */
 
 #projectsSection {
-  height: 969px;
+  height: 61rem;
   padding: 0 0 20px 0;
   position: relative;
 }
@@ -422,7 +422,7 @@ input, label {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem 0 0 0;
+  margin: 2rem 0 0 0;
   width: 100%;
 }
 
@@ -568,7 +568,7 @@ input, label {
 /* CONTACT */
 
 #contactSection {
-  height: 100vh;
+  height: 61rem;
   background: rgba(245,222,179,0.6);
   color: #333;
   position: relative;
@@ -792,10 +792,21 @@ input, label {
 
   #aboutMeContent {
     padding: 0 56px;
+    width: 100%;
+  }
+
+  #aboutMePortrait {
+    width: 41%;
+    height: 31rem;
+    margin: 1.2rem 0 0 0;
+  }
+
+  #aboutMeHeader {
+    font-size: 5.5rem;
   }
 
   #aboutMeSection p {
-    width: 56%;
+    width: 53%;
   }
 
   /* Skills page */
