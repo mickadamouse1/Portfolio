@@ -422,33 +422,30 @@ input, label {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2rem 0 0 0;
+  margin: 1.2rem 0 0 0;
   width: 100%;
 }
 
 .app {
   position: relative;
-  width: 19rem;
-  height: 19rem;
   border-radius: 3rem;
-  margin: 0.5rem;
-  box-shadow: -2px 2px 3px rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.6);
   opacity: 0.95;
   transition: .5s ease;
 }
 
 .appImg {
   opacity: 1;
-  width: 90%;
-  height: 90%;
   backface-visibility: hidden;
   background-position: center !important;
   background-size: cover !important;
   border-radius: 3rem;
   transition: .2s ease;
+}
+
+.appImg-small {
+  width: 90%;
+  height: 90%;
 }
 
 .appNameContainer {
@@ -464,16 +461,21 @@ input, label {
 
 .appName {
   background: firebrick;
-  padding: 0.5rem;
-  font-size: 1.5rem;
   font-family: sans-serif;
-  font-weight: 300;
   text-decoration: none;
   color: white;
-  text-align: center;
   box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: .5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .6s ease;
+}
+
+.appName-small {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-weight: 300;
 }
 
 /* Projects Design Specifics */
@@ -531,36 +533,59 @@ input, label {
 
 /* Projects Animation Classes */
 
-.app:hover .appImg {
+.app-small:hover .appImg {
   opacity: 0.6;
 }
 
-.app:hover .appName {
+.app-small:hover .appName {
   opacity: 1;
 }
 
-.app:hover {
+.app-small:hover {
   box-shadow: 0 0 8px black;
   z-index: 10;
 }
 
-.app-large {
-  display: inline-block;
-  position: static;
-  width: 50rem;
-  height: 23rem;
-  margin: 15px 15px;
-  background: white;
-  box-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+.app-small {
+  width: 19rem;
+  height: 19rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.appImg-small {
+.app-large {
+  width: 60rem;
+  height: 30rem;
+  margin: 4rem 0 0 0;
+  background: white !important;
+}
+
+.appImg-large {
   border-radius: 2rem;
-  width: 20rem;
-  height: 20rem;
+  width: 26rem;
+  height: 26rem;
   position: relative;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 2rem;
+  left: 2rem;
+}
+
+.appName-large {
+  opacity: 1;
+  position: relative;
+  right: -27rem;
+  top: -12rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: indianred;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: .2s ease;
 }
 
 /* CONTACT */

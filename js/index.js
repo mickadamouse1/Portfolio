@@ -232,6 +232,96 @@ window.onload = function() {
   btnProjects.onclick = function(){scrollToSection(projectsSection)}
   btnContact.onclick = function(){scrollToSection(contactSection)}
 
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+  //###################################################
+  // ANIMATION PROJECTS ###############################
+  //###################################################
+
+  var apps = [appAdvBattleships, appSimpleCalculator, appPomodoro, appWordCounter, appBouncyBalls, moreApps];
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+  // This function hides all of the apps except for the one specified when called.
+
+  function hideAllOtherApps(app) {
+    for (var i = 0; i < apps.length; i++) {
+      if (apps[i] !== app) {
+        if (app.classList[1] === "app-large") {
+          resetAppDisplay(i);
+        } else {
+          setIdVisability(apps[i], "none");
+        }
+      }
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+  // This function returns all other apps to their original display value when the
+  // grown app shrinks back to normal size.
+
+  function resetAppDisplay(num){
+    setTimeout(function(){
+      setIdVisability(apps[num], "flex");
+    }, 350);
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+  // This function toggles all of the classes to allow for them to expand and shrink.
+
+  function appExpand(app, img, btn, name) {
+    app.classList.toggle("app-small");
+    app.classList.toggle("app-large");
+    img.classList.toggle("appImg-small");
+    img.classList.toggle("appImg-large");
+    btn.classList.toggle("appName-small");
+    btn.classList.toggle("appName-large");
+
+    if (btn.innerHTML === "X") {
+      btn.innerHTML = name;
+    } else {
+      btn.innerHTML = "X";
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+  // These are the app buttons that make them grow and shrink.
+
+  btnAdvBattleships.onclick = function() {
+    hideAllOtherApps(appAdvBattleships);
+    appExpand(appAdvBattleships, appImgBattleships, btnAdvBattleships, "Battleships");
+  }
+
+  btnCalculator.onclick = function() {
+    hideAllOtherApps(appSimpleCalculator);
+    appExpand(appSimpleCalculator, appImgCalculator, btnCalculator, "Calculator");
+  }
+
+  btnPomodoro.onclick = function() {
+    hideAllOtherApps(appPomodoro);
+    appExpand(appPomodoro, appImgPomodoro, btnPomodoro, "Pomodoro");
+  }
+
+  btnWordCounter.onclick = function() {
+    hideAllOtherApps(appWordCounter);
+    appExpand(appWordCounter, appImgWordCounter, btnWordCounter, "Word Counter");
+  }
+
+  btnBouncyBalls.onclick = function() {
+    hideAllOtherApps(appBouncyBalls);
+    appExpand(appBouncyBalls, appImgBouncyBalls, btnBouncyBalls, "Bouncy Balls");
+  }
+
+  btnMoreApps.onclick = function() {
+    hideAllOtherApps(moreApps);
+    appExpand(moreApps, appImgMoreApps, btnMoreApps, "More Apps");
+  }
+
 } // WINDOW.ONLOAD ENDS HERE
 
 ////////////////////////////////////////////////////////////////////////////////
